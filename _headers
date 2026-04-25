@@ -1,0 +1,16 @@
+/*
+  Cache-Control: public, max-age=300, must-revalidate
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+
+/style.css
+  Cache-Control: public, max-age=604800, must-revalidate
+
+/*.png
+  Cache-Control: public, max-age=2592000, must-revalidate
+
+/*.ico
+  Cache-Control: public, max-age=2592000, must-revalidate
+
+/*.svg
+  Cache-Control: public, max-age=2592000, must-revalidate
