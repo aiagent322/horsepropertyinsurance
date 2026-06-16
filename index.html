@@ -4,452 +4,412 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="index, follow">
-<title>HorsePropertyInsurance.com — The Authority on Horse Property Insurance</title>
-<meta name="description" content="Horse property insurance explained — from backyard horse owners to professional operations. Deep coverage on wildfire risk, barn fire, liability gaps, business insurance, and more.">
+<title>HorsePropertyInsurance.com — Farm & Ranch Property Insurance Knowledge Base</title>
+<meta name="description" content="Horse property insurance education — farm and ranch coverage, barn insurance, liability, agritourism, fencing. 200+ Q&A, state guides, claims help. No sales pressure.">
 <link rel="canonical" href="https://horsepropertyinsurance.com/">
-<meta property="og:title" content="HorsePropertyInsurance.com — The Authority on Horse Property Insurance">
-<meta property="og:description" content="Horse property insurance explained — wildfire risk, barn fire, liability, business insurance gaps, and more. The most complete resource in the industry.">
+<meta property="og:title" content="HorsePropertyInsurance.com — Farm & Ranch Property Insurance Knowledge Base">
+<meta property="og:description" content="Horse property insurance education — farm and ranch coverage, barn insurance, liability, agritourism, fencing. 200+ Q&A, state guides, claims help.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://horsepropertyinsurance.com/">
-<meta property="og:image" content="https://horsepropertyinsurance.com/og-image.png">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="HorsePropertyInsurance.com — The Authority on Horse Property Insurance">
-<meta name="twitter:description" content="Horse property insurance for everyone — backyard owners to professional operations. Deep dives into wildfire, barn fire, business coverage gaps, and more.">
-<meta name="twitter:image" content="https://horsepropertyinsurance.com/og-image.png">
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<link rel="stylesheet" href="/style.css">
-<script type="application/ld+json">
-[{
-  "@context":"https://schema.org",
-  "@type":"WebSite",
-  "name":"HorsePropertyInsurance.com",
-  "url":"https://horsepropertyinsurance.com/",
-  "description":"The authority source for horse property insurance — coverage, wildfire risk, barn fire, business insurance gaps, and state-by-state guidance.",
-  "publisher":{"@type":"Organization","name":"Bridle & Bit Magazine","url":"https://www.bridleandbit.com"}
-},{
-  "@context":"https://schema.org",
-  "@type":"FAQPage",
-  "mainEntity":[
-    {"@type":"Question","name":"What does horse property insurance cover?","acceptedAnswer":{"@type":"Answer","text":"Horse property insurance typically covers the dwelling, barns and outbuildings, fences, liability, and personal property on the property. However, it does not cover horses themselves (that requires separate equine mortality insurance), commercial boarding operations, or business income loss without specific endorsements."}},
-    {"@type":"Question","name":"Does horse property insurance cover wildfire damage?","acceptedAnswer":{"@type":"Answer","text":"Standard horse property policies include fire coverage, but wildfire losses in high-risk zones may face coverage limitations, higher deductibles, or exclusions from some carriers. Many western states now require separate wildfire coverage or riders, and admitted carriers have pulled out of fire-prone markets."}},
-    {"@type":"Question","name":"What is the difference between horse property insurance and farm and ranch insurance?","acceptedAnswer":{"@type":"Answer","text":"Horse property insurance (typically a homeowners policy with equine endorsements) covers a primary residence with horses. Farm and ranch insurance is a commercial policy designed for income-producing agricultural operations, covering business income, workers compensation eligibility, commercial liability, and livestock as business assets."}}
-  ]
-}]
-</script>
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebSite","name":"HorsePropertyInsurance.com","url":"https://horsepropertyinsurance.com/","description":"Horse property insurance knowledge base — farm and ranch, barn, liability, agritourism coverage. 200+ Q&A, state guides.","publisher":{"@type":"Organization","name":"Bridle & Bit Magazine","url":"https://www.bridleandbit.com"}},{"@context":"https://schema.org","@type":"Organization","name":"HorsePropertyInsurance.com","url":"https://horsepropertyinsurance.com/","parentOrganization":{"@type":"Organization","name":"Bridle & Bit Magazine","url":"https://www.bridleandbit.com"}}]</script>
+<style>
+:root {
+  --primary: #0b3c5d;
+  --primary-light: #144e78;
+  --secondary: #1d6fa5;
+  --accent: #2a8fd4;
+  --gold: #b8860b;
+  --bg: #ffffff;
+  --bg-alt: #f4f6f8;
+  --bg-warm: #faf9f7;
+  --text: #1f2933;
+  --text-mid: #4a5568;
+  --text-light: #6b7280;
+  --border: #e5e7eb;
+  --success: #047857;
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+  --shadow-md: 0 4px 6px rgba(0,0,0,0.07);
+  --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+  --radius: 6px;
+  --max-w: 1100px;
+  --transition: 0.2s ease;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+a,button,[onclick],.qa-question,.deep-dive-header{touch-action:manipulation;}
+html{scroll-behavior:smooth;scroll-padding-top:100px;-webkit-text-size-adjust:100%;}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+a{color:var(--secondary);text-decoration:none;transition:color var(--transition);}
+a:hover{color:var(--primary);text-decoration:underline;}
+img{max-width:100%;height:auto;display:block;}
+.container{max-width:var(--max-w);margin:0 auto;padding:0 16px;}
+:focus-visible{outline:2px solid var(--secondary);outline-offset:2px;border-radius:2px;}
+:focus:not(:focus-visible){outline:none;}
+
+/* HEADER */
+.site-header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.97);border-bottom:1px solid var(--border);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);}
+.header-top{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;}
+.site-logo{font-size:1.25rem;font-weight:700;color:var(--primary);letter-spacing:-0.02em;}
+.site-logo span{color:var(--secondary);}
+.nav-toggle{background:none;border:none;cursor:pointer;padding:6px;color:var(--primary);}
+.nav-toggle svg{width:22px;height:22px;}
+.main-nav{display:none;flex-direction:column;padding:0 16px 12px;gap:2px;}
+.main-nav.open{display:flex;}
+.main-nav a{padding:8px 4px;color:var(--text);font-size:0.95rem;border-bottom:1px solid var(--border-light,#f0f1f3);}
+.main-nav a:hover{color:var(--primary);}
+@media(min-width:768px){
+  .header-top{padding:14px 24px;}
+  .nav-toggle{display:none;}
+  .main-nav{display:flex;flex-direction:row;padding:0 24px 10px;gap:0;}
+  .main-nav a{padding:6px 14px;border-bottom:none;font-size:0.9rem;}
+}
+
+/* HERO */
+.hero{background:linear-gradient(135deg,var(--primary) 0%,var(--primary-light) 60%,var(--secondary) 100%);color:#fff;padding:40px 16px 48px;}
+.hero h1{font-size:1.6rem;font-weight:800;line-height:1.2;margin-bottom:12px;letter-spacing:-0.02em;}
+.hero-desc{font-size:0.95rem;opacity:0.9;margin-bottom:20px;max-width:600px;}
+.hero-stats{display:flex;gap:20px;flex-wrap:wrap;margin-bottom:24px;}
+.hero-stat{text-align:center;}
+.hero-stat-num{font-size:1.6rem;font-weight:800;display:block;}
+.hero-stat-label{font-size:0.7rem;opacity:0.8;text-transform:uppercase;letter-spacing:0.05em;}
+.hero-btns{display:flex;gap:10px;flex-wrap:wrap;}
+.hero-btn{display:inline-block;padding:10px 18px;border-radius:var(--radius);font-weight:600;font-size:0.85rem;cursor:pointer;text-decoration:none;}
+.hero-btn-primary{background:#fff;color:var(--primary);}
+.hero-btn-secondary{background:transparent;color:#fff;border:2px solid rgba(255,255,255,0.6);}
+@media(min-width:600px){
+  .hero{padding:56px 24px 64px;}
+  .hero h1{font-size:2.2rem;}
+  .hero-desc{font-size:1.05rem;}
+}
+@media(min-width:900px){
+  .hero h1{font-size:2.8rem;}
+}
+
+/* COVERAGE GRID */
+.section{padding:40px 0;}
+.section-alt{background:var(--bg-alt);}
+.section-title{font-size:1.3rem;font-weight:700;color:var(--primary);margin-bottom:6px;}
+.section-sub{color:var(--text-light);font-size:0.9rem;margin-bottom:24px;}
+.card-grid{display:grid;grid-template-columns:1fr;gap:16px;}
+@media(min-width:480px){.card-grid{grid-template-columns:repeat(2,1fr);}}
+@media(min-width:768px){.card-grid{grid-template-columns:repeat(3,1fr);}}
+@media(min-width:1000px){.card-grid-4{grid-template-columns:repeat(4,1fr);}}
+.card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow-sm);transition:box-shadow var(--transition),transform var(--transition);}
+.card:hover{box-shadow:var(--shadow-md);transform:translateY(-2px);}
+.card-icon{font-size:1.8rem;margin-bottom:10px;}
+.card-title{font-size:1rem;font-weight:700;color:var(--primary);margin-bottom:6px;}
+.card-desc{font-size:0.88rem;color:var(--text-mid);line-height:1.5;}
+.card a{display:inline-block;margin-top:10px;font-size:0.83rem;font-weight:600;color:var(--secondary);}
+
+/* Q&A */
+.qa-filter-bar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px;}
+.qa-filter{background:var(--bg-alt);border:1px solid var(--border);border-radius:20px;padding:5px 14px;font-size:0.83rem;cursor:pointer;transition:all var(--transition);}
+.qa-filter.active,.qa-filter:hover{background:var(--primary);color:#fff;border-color:var(--primary);}
+.qa-item{border:1px solid var(--border);border-radius:var(--radius);margin-bottom:8px;overflow:hidden;}
+.qa-question{padding:14px 16px;font-weight:600;font-size:0.95rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;background:#fff;}
+.qa-question:hover{background:var(--bg-alt);}
+.qa-arrow{transition:transform var(--transition);font-size:0.8rem;color:var(--text-light);}
+.qa-item.open .qa-arrow{transform:rotate(180deg);}
+.qa-answer{display:none;padding:0 16px 16px;font-size:0.9rem;color:var(--text-mid);line-height:1.6;}
+.qa-item.open .qa-answer{display:block;}
+
+/* STATE GRID */
+.state-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;}
+@media(min-width:480px){.state-grid{grid-template-columns:repeat(3,1fr);}}
+@media(min-width:768px){.state-grid{grid-template-columns:repeat(4,1fr);}}
+.state-link{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:12px;text-align:center;font-size:0.88rem;font-weight:600;color:var(--primary);transition:all var(--transition);}
+.state-link:hover{background:var(--primary);color:#fff;border-color:var(--primary);text-decoration:none;}
+
+/* TIP BOX */
+.tip-box{background:var(--bg-alt);border-left:4px solid var(--primary);padding:16px 20px;border-radius:0 var(--radius) var(--radius) 0;margin:20px 0;}
+.tip-box strong{color:var(--primary);}
+
+/* FOOTER */
+footer{background:var(--primary);color:rgba(255,255,255,0.8);padding:40px 16px;margin-top:0;}
+.footer-grid{display:grid;grid-template-columns:1fr;gap:28px;}
+@media(min-width:600px){.footer-grid{grid-template-columns:repeat(2,1fr);}}
+@media(min-width:900px){.footer-grid{grid-template-columns:repeat(4,1fr);}}
+.footer-col h4{color:#fff;font-size:0.9rem;font-weight:700;margin-bottom:12px;text-transform:uppercase;letter-spacing:0.05em;}
+.footer-col a{display:block;color:rgba(255,255,255,0.7);font-size:0.85rem;margin-bottom:6px;}
+.footer-col a:hover{color:#fff;text-decoration:none;}
+.footer-bottom{margin-top:32px;padding-top:20px;border-top:1px solid rgba(255,255,255,0.15);font-size:0.8rem;text-align:center;color:rgba(255,255,255,0.5);}
+.footer-bottom a{color:rgba(255,255,255,0.6);}
+</style>
 </head>
 <body>
 
-<a class="skip-nav" href="#main">Skip to content</a>
-
-<!-- HEADER -->
 <header class="site-header">
-  <div class="header-inner">
-    <a href="/" class="site-logo">
-      <div class="logo-icon">🏡</div>
-      <div class="logo-text">
-        <span class="logo-name">HorsePropertyInsurance</span>
-        <span class="logo-tag">.com · The Authority</span>
-      </div>
-    </a>
-    <button class="nav-toggle" id="navToggle" aria-label="Open navigation" aria-expanded="false">
-      <span></span><span></span><span></span>
+  <div class="header-top">
+    <a href="/" class="site-logo" style="text-decoration:none">HorseProperty<span>Insurance.com</span></a>
+    <button class="nav-toggle" onclick="this.setAttribute('aria-expanded',this.getAttribute('aria-expanded')==='true'?'false':'true');document.querySelector('.main-nav').classList.toggle('open')" aria-label="Toggle navigation" aria-expanded="false">
+      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
     </button>
-    <nav class="main-nav" id="mainNav" aria-label="Site navigation">
-      <span class="nav-section">Coverage</span>
-      <a href="/coverage/">All Coverage</a>
-      <span class="nav-section">Risks</span>
-      <a href="/risks/wildfire.html">Wildfire</a>
-      <a href="/risks/barn-fire.html">Barn Fire</a>
-      <span class="nav-section">Guides</span>
-      <a href="/guides/">By Owner Type</a>
-      <a href="/business/">Business Gaps</a>
-      <a href="/qa/">Q&amp;A</a>
-      <a href="/glossary/">Glossary</a>
-    </nav>
   </div>
+  <nav class="main-nav">
+    <a href="/coverage/">Coverage Types</a>
+    <a href="/state/">By State</a>
+    <a href="/claims/">Claims</a>
+    <a href="/qa/">Q&amp;A</a>
+    <a href="/glossary/">Glossary</a>
+    <a href="/cost/">Cost Guide</a>
+  </nav>
 </header>
 
-<!-- HERO -->
-<section class="page-hero" style="padding:56px 16px 60px;">
-  <p class="section-label" style="color:var(--gold-bright);margin-bottom:10px;">The Authority Source</p>
-  <h1>Horse Property Insurance<br>Explained Completely</h1>
-  <p>From the backyard horse owner with two acres and a run-in shed to the multi-barn professional operation — this is the most complete resource on horse property insurance in the industry. No sales pitch. Just answers.</p>
-  <div class="hero-badges">
-    <span class="hero-badge">🔥 Wildfire Risk</span>
-    <span class="hero-badge">🏚️ Barn Fire</span>
-    <span class="hero-badge">⚠️ Coverage Gaps</span>
-    <span class="hero-badge">💼 Business Insurance</span>
-    <span class="hero-badge">📋 All Coverage Types</span>
-    <span class="hero-badge">📍 15 States</span>
+<section class="hero">
+  <div class="container">
+    <h1>Horse Property Insurance<br>Knowledge Base</h1>
+    <p class="hero-desc">Farm and ranch coverage, barn insurance, liability protection, agritourism policies — everything horse property owners need to know. No agents. No sales pressure. Pure education.</p>
+    <div class="hero-stats">
+      <div class="hero-stat"><span class="hero-stat-num">200+</span><span class="hero-stat-label">Q&amp;A</span></div>
+      <div class="hero-stat"><span class="hero-stat-num">15</span><span class="hero-stat-label">State Guides</span></div>
+      <div class="hero-stat"><span class="hero-stat-num">12</span><span class="hero-stat-label">Coverage Types</span></div>
+      <div class="hero-stat"><span class="hero-stat-num">Free</span><span class="hero-stat-label">No Sign-Up</span></div>
+    </div>
+    <div class="hero-btns">
+      <a href="/coverage/" class="hero-btn hero-btn-primary">Explore Coverage</a>
+      <a href="/qa/" class="hero-btn hero-btn-secondary">Browse Q&amp;A</a>
+    </div>
   </div>
 </section>
 
-<!-- FIRE ALERT -->
-<div style="background:var(--bg-fire);border-bottom:2px solid var(--fire);padding:14px 16px;">
-  <div style="max-width:var(--max-w);margin:0 auto;display:flex;gap:12px;align-items:flex-start;">
-    <span style="font-size:22px;flex-shrink:0;">🔥</span>
-    <div>
-      <strong style="color:var(--fire);font-size:14px;">Critical: Most horse property owners are underinsured for fire.</strong>
-      <span style="color:var(--text-mid);font-size:14px;"> The #1 covered claim on horse properties is fire — yet most policies are written without understanding the true replacement cost of barns, equipment, or the income loss that follows. <a href="/risks/wildfire.html" style="color:var(--fire);font-weight:600;">Read the complete wildfire guide →</a></span>
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Coverage Types</h2>
+    <p class="section-sub">Every insurance category horse property owners need to understand</p>
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-icon">🏚️</div>
+        <div class="card-title">Farm &amp; Ranch Insurance</div>
+        <div class="card-desc">The foundational policy for horse properties — covering structures, equipment, liability, and sometimes livestock under one policy.</div>
+        <a href="/coverage/farm-ranch/">Learn More →</a>
+      </div>
+      <div class="card">
+        <div class="card-icon">🏗️</div>
+        <div class="card-title">Barn &amp; Structure Insurance</div>
+        <div class="card-desc">Standalone coverage for barns, arenas, run-in sheds, hay storage, and outbuildings not covered under standard homeowners policies.</div>
+        <a href="/coverage/barn-structure/">Learn More →</a>
+      </div>
+      <div class="card">
+        <div class="card-icon">⚖️</div>
+        <div class="card-title">Equine Liability</div>
+        <div class="card-desc">Protection when a horse injures a visitor, boarder, or third party on your property — critical for any horse property owner.</div>
+        <a href="/coverage/liability/">Learn More →</a>
+      </div>
+      <div class="card">
+        <div class="card-icon">🌾</div>
+        <div class="card-title">Agritourism Liability</div>
+        <div class="card-desc">Specialized coverage for properties offering trail rides, lessons, horse camps, or public events — a gap in standard farm policies.</div>
+        <a href="/coverage/agritourism/">Learn More →</a>
+      </div>
+      <div class="card">
+        <div class="card-icon">🔲</div>
+        <div class="card-title">Fencing &amp; Improvements</div>
+        <div class="card-desc">Coverage for perimeter fencing, cross-fencing, gates, water systems, and other permanent improvements to horse property.</div>
+        <a href="/coverage/fencing/">Learn More →</a>
+      </div>
+      <div class="card">
+        <div class="card-icon">🐴</div>
+        <div class="card-title">Livestock Coverage</div>
+        <div class="card-desc">Mortality and theft protection for horses and other livestock kept on the property — separate from equine mortality insurance.</div>
+        <a href="/coverage/livestock/">Learn More →</a>
+      </div>
+      <div class="card">
+        <div class="card-icon">🌊</div>
+        <div class="card-title">Flood &amp; Natural Disaster</div>
+        <div class="card-desc">Standard farm policies exclude flood. Horse property owners in flood zones need separate NFIP or private flood coverage.</div>
+        <a href="/coverage/flood/">Learn More →</a>
+      </div>
+      <div class="card">
+        <div class="card-icon">🚜</div>
+        <div class="card-title">Equipment &amp; Machinery</div>
+        <div class="card-desc">Coverage for tractors, ATVs, arena drag equipment, hay equipment, and other farm machinery used on horse properties.</div>
+        <a href="/coverage/equipment/">Learn More →</a>
+      </div>
+      <div class="card">
+        <div class="card-icon">🏠</div>
+        <div class="card-title">Dwelling on Farm</div>
+        <div class="card-desc">The residence on a horse property often requires a farm dwelling endorsement — standard homeowners policies may not apply.</div>
+        <a href="/coverage/dwelling/">Learn More →</a>
+      </div>
     </div>
   </div>
-</div>
+</section>
 
-<main id="main">
+<section class="section section-alt">
+  <div class="container">
+    <h2 class="section-title">Common Questions</h2>
+    <p class="section-sub">Answers horse property owners ask most</p>
+    <div class="qa-filter-bar">
+      <button class="qa-filter active" onclick="filterQA('all',this)">All</button>
+      <button class="qa-filter" onclick="filterQA('coverage',this)">Coverage</button>
+      <button class="qa-filter" onclick="filterQA('cost',this)">Cost</button>
+      <button class="qa-filter" onclick="filterQA('claims',this)">Claims</button>
+      <button class="qa-filter" onclick="filterQA('liability',this)">Liability</button>
+    </div>
+    <div id="qa-list">
+      <div class="qa-item" data-cat="coverage">
+        <div class="qa-question" onclick="toggleQA(this)">Does my homeowners policy cover my barn and horse facilities? <span class="qa-arrow">▼</span></div>
+        <div class="qa-answer">Almost certainly not — at least not adequately. Standard homeowners policies are designed for residential properties and typically exclude or severely limit coverage for farm structures, agricultural outbuildings, and commercial activities. A barn used to house horses will often be treated as a farm structure and excluded from a standard homeowners policy. Even when coverage exists, the limits are typically far below replacement cost for a quality barn. Horse property owners need either a farm and ranch policy or a homeowners policy with specific farm structure endorsements.</div>
+      </div>
+      <div class="qa-item" data-cat="liability">
+        <div class="qa-question" onclick="toggleQA(this)">Am I liable if someone is injured by a horse on my property? <span class="qa-arrow">▼</span></div>
+        <div class="qa-answer">Potentially yes, even in states with equine liability limitation acts. While most states have passed laws limiting liability for inherent risks of equine activities, these protections have exceptions — particularly for negligence, failure to post required warning signs, and activities that go beyond inherent equine risks. If you board horses, give lessons, or allow public access to your property, your liability exposure increases significantly. Equine liability coverage under a farm and ranch policy or as a standalone policy is essential for any horse property owner who allows others onto their property.</div>
+      </div>
+      <div class="qa-item" data-cat="cost">
+        <div class="qa-question" onclick="toggleQA(this)">How much does horse property insurance cost? <span class="qa-arrow">▼</span></div>
+        <div class="qa-answer">Farm and ranch policies for horse properties typically range from $1,500 to $5,000+ per year depending on property size, structure values, location, acreage, and activities conducted. A small hobby farm with a basic barn and no commercial activity might insure for $1,500–$2,500 annually. A larger property with a competition arena, multiple barns, boarding or training operations, and significant structure values could run $4,000–$8,000 or more. Liability limits, deductible choices, and whether livestock coverage is included all affect the final premium significantly.</div>
+      </div>
+      <div class="qa-item" data-cat="coverage">
+        <div class="qa-question" onclick="toggleQA(this)">Is my horse trailer covered under my farm policy? <span class="qa-arrow">▼</span></div>
+        <div class="qa-answer">Horse trailers are typically not covered under a farm and ranch policy while in transit — they require a separate commercial auto or specialty trailer policy. However, when a trailer is parked on the property and not attached to a vehicle, some farm policies will cover it as personal property or equipment. The horses inside the trailer while it is parked may also have coverage considerations depending on your livestock endorsement. Always confirm with your agent specifically how your trailer is covered both on property and in transit.</div>
+      </div>
+      <div class="qa-item" data-cat="claims">
+        <div class="qa-question" onclick="toggleQA(this)">What should I do immediately after a barn fire or storm damage? <span class="qa-arrow">▼</span></div>
+        <div class="qa-answer">Contact your insurance company or agent within 24 hours — most policies require prompt notification of losses. Ensure human and animal safety first. Document everything before any cleanup: photograph and video all damage from multiple angles. Do not dispose of damaged property until your adjuster has inspected unless it creates a safety hazard. Make temporary repairs to prevent further damage and keep all receipts — these emergency repair costs are typically reimbursable. Provide your insurer with a complete inventory of damaged or destroyed property and structures.</div>
+      </div>
+      <div class="qa-item" data-cat="liability">
+        <div class="qa-question" onclick="toggleQA(this)">Do I need special insurance if I host horse shows or events? <span class="qa-arrow">▼</span></div>
+        <div class="qa-answer">Yes. Hosting events — whether horse shows, clinics, trail ride fundraisers, or any public gathering — creates liability exposure that often exceeds standard farm policy limits and may trigger exclusions for commercial or public activities. Event liability insurance is available as a standalone one-day or multi-day policy or as an endorsement to a farm policy. If you host recurring events, agritourism coverage is the appropriate solution. Some equestrian organizations also offer event liability coverage to member facilities.</div>
+      </div>
+      <div class="qa-item" data-cat="coverage">
+        <div class="qa-question" onclick="toggleQA(this)">What is the difference between actual cash value and replacement cost for barn coverage? <span class="qa-arrow">▼</span></div>
+        <div class="qa-answer">Actual cash value (ACV) pays you the depreciated value of a structure at the time of loss — a 20-year-old barn might receive only a fraction of what it costs to rebuild. Replacement cost coverage pays what it actually costs to rebuild or repair the structure with materials of similar kind and quality at current prices, without depreciation deducted. Replacement cost coverage costs more in premium but is almost always worth it for primary structures like barns and arenas. Always confirm which basis your policy uses for each covered structure.</div>
+      </div>
+      <div class="qa-item" data-cat="cost">
+        <div class="qa-question" onclick="toggleQA(this)">What factors most affect my horse property insurance premium? <span class="qa-arrow">▼</span></div>
+        <div class="qa-answer">The largest premium drivers are: total insured structure value (replacement cost of all barns, arenas, fencing, and outbuildings); location and wildfire, flood, or tornado risk; whether commercial activities like boarding, training, or lessons are conducted; number of horses and livestock; claims history; and selected liability limits. Properties in high wildfire zones — common in the western states — may see significant premium increases or coverage limitations. Security features like automatic waterers, smoke detectors, and lightning rods can reduce premiums with some insurers.</div>
+      </div>
+    </div>
+    <p style="margin-top:20px;"><a href="/qa/" style="font-weight:600;">View all 200+ Q&amp;A →</a></p>
+  </div>
+</section>
 
-<!-- STAT ROW -->
-<div style="background:var(--bg-alt);border-bottom:1px solid var(--border);padding:20px 16px;">
-  <div style="max-width:var(--max-w);margin:0 auto;">
-    <div class="stat-row" style="margin:0;">
-      <div class="stat-box stat-fire">
-        <div class="stat-number">$85B+</div>
-        <div class="stat-label">Wildfire losses in 2023 across US</div>
-      </div>
-      <div class="stat-box stat-fire">
-        <div class="stat-number">73%</div>
-        <div class="stat-label">Horse property owners underinsured on barns</div>
-      </div>
-      <div class="stat-box">
-        <div class="stat-number">12+</div>
-        <div class="stat-label">Coverage types on a complete property policy</div>
-      </div>
-      <div class="stat-box">
-        <div class="stat-number">4.2M</div>
-        <div class="stat-label">Horses on US farms and equestrian properties</div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- WHO IS THIS FOR -->
-<div style="max-width:var(--max-w);margin:40px auto;padding:0 16px;">
-  <div class="text-center mb-24">
-    <p class="section-label">Who This Resource Serves</p>
-    <h2 class="section-title">Every Level of Horse Property Owner</h2>
-    <p style="max-width:640px;margin:0 auto;">Your insurance needs depend entirely on how you use your property. A hobby owner and a professional boarding operation need fundamentally different coverage — and most agents don't specialize in either.</p>
-  </div>
-  <div class="coverage-grid">
-    <a href="/guides/backyard-owner.html" class="coverage-card">
-      <div class="coverage-card-icon">🏡</div>
-      <div class="coverage-card-title">Backyard Horse Owner</div>
-      <div class="coverage-card-desc">1–5 horses, personal use, small acreage. What a standard homeowners policy misses and which endorsements you actually need.</div>
-    </a>
-    <a href="/guides/boarding-facility.html" class="coverage-card">
-      <div class="coverage-card-icon">🐴</div>
-      <div class="coverage-card-title">Boarding Facility</div>
-      <div class="coverage-card-desc">Taking money for board changes everything. The business insurance you need that your property policy specifically excludes.</div>
-    </a>
-    <a href="/guides/training-operation.html" class="coverage-card">
-      <div class="coverage-card-icon">🏆</div>
-      <div class="coverage-card-title">Training Operation</div>
-      <div class="coverage-card-desc">Professional trainers face unique liability, care-custody-control exposures, and income risks no standard policy covers.</div>
-    </a>
-    <a href="/guides/breeding-farm.html" class="coverage-card">
-      <div class="coverage-card-icon">🐎</div>
-      <div class="coverage-card-title">Breeding Farm</div>
-      <div class="coverage-card-desc">High-value stallions, embryo transfer, foaling risks, and the specific mortality coverage breeding operations require.</div>
-    </a>
-    <a href="/guides/ranch.html" class="coverage-card">
-      <div class="coverage-card-icon">🤠</div>
-      <div class="coverage-card-title">Working Ranch</div>
-      <div class="coverage-card-desc">Large acreage, cattle and horses, multiple employees, and commercial operations that must be on a farm &amp; ranch policy.</div>
-    </a>
-    <a href="/guides/" class="coverage-card" style="background:var(--bg-alt);border-style:dashed;">
-      <div class="coverage-card-icon">📋</div>
-      <div class="coverage-card-title">Compare All Profiles</div>
-      <div class="coverage-card-desc">Side-by-side breakdown of what coverage each operation type needs and why.</div>
-    </a>
-  </div>
-</div>
-
-<!-- FIRE DEEP DIVE SECTION -->
-<div style="background:var(--bg-fire);border-top:1px solid #f0c0a0;border-bottom:1px solid #f0c0a0;padding:40px 16px;">
-  <div style="max-width:var(--max-w);margin:0 auto;">
-    <div class="text-center mb-24">
-      <p class="section-label" style="color:var(--fire);">⚠️ Critical Coverage Issue</p>
-      <h2 class="section-title" style="color:var(--fire);">Fire Risk — The Coverage Crisis</h2>
-      <p style="max-width:640px;margin:0 auto;color:var(--text-mid);">Barn fires and wildfires are the single largest horse property insurance claims — yet most policies are written with inadequate limits, missing endorsements, and coverage exclusions that only surface at claim time.</p>
-    </div>
-    <div class="coverage-grid">
-      <a href="/risks/wildfire.html" class="coverage-card card-fire">
-        <div class="coverage-card-icon">🔥</div>
-        <div class="coverage-card-title">Wildfire Risk &amp; Coverage</div>
-        <div class="coverage-card-desc">How wildfires destroy horse properties, which carriers still write fire-prone zones, and what the coverage gaps actually cost you.</div>
-      </a>
-      <a href="/risks/barn-fire.html" class="coverage-card card-fire">
-        <div class="coverage-card-icon">🚒</div>
-        <div class="coverage-card-title">Barn Fire — Complete Guide</div>
-        <div class="coverage-card-desc">Electrical fires, hay combustion, heating equipment — the causes, costs, and how most barn claims are paid far below actual loss.</div>
-      </a>
-      <a href="/risks/loss-of-horses.html" class="coverage-card card-fire">
-        <div class="coverage-card-icon">💔</div>
-        <div class="coverage-card-title">Loss of Horses in a Fire</div>
-        <div class="coverage-card-desc">Your property policy does not cover horse mortality. What coverage exists, how it works, and the deadlines that kill most claims.</div>
-      </a>
-      <a href="/risks/equipment-loss.html" class="coverage-card card-fire">
-        <div class="coverage-card-icon">🚜</div>
-        <div class="coverage-card-title">Equipment &amp; Tool Loss</div>
-        <div class="coverage-card-desc">Tractors, trailers, feeders, arena equipment — most aren't covered under a standard dwelling policy. Here's how to plug the gaps.</div>
-      </a>
-      <a href="/risks/income-loss.html" class="coverage-card card-fire">
-        <div class="coverage-card-icon">📉</div>
-        <div class="coverage-card-title">Income Loss After a Fire</div>
-        <div class="coverage-card-desc">If your barn burns and you board horses, you've lost income for months. Business interruption coverage — and why most don't have it.</div>
-      </a>
-      <a href="/business/coverage-gaps.html" class="coverage-card" style="border-color:var(--gold-light);background:var(--bg-warm);">
-        <div class="coverage-card-icon">⚖️</div>
-        <div class="coverage-card-title">What Your Policy Doesn't Cover</div>
-        <div class="coverage-card-desc">The critical gap between what horse property owners assume is covered and what actually is. The most important page on this site.</div>
-      </a>
-    </div>
-  </div>
-</div>
-
-<!-- COVERAGE TYPES -->
-<div style="max-width:var(--max-w);margin:40px auto;padding:0 16px;">
-  <div class="text-center mb-24">
-    <p class="section-label">Coverage Library</p>
-    <h2 class="section-title">Every Coverage Type Explained</h2>
-    <p style="max-width:640px;margin:0 auto;">Horse property insurance isn't one policy — it's a combination of coverages that must work together. Most agents build policies by checkbox. This is how to build them by exposure.</p>
-  </div>
-  <div class="coverage-grid">
-    <a href="/coverage/dwelling.html" class="coverage-card">
-      <div class="coverage-card-icon">🏠</div>
-      <div class="coverage-card-title">Dwelling Coverage</div>
-      <div class="coverage-card-desc">The house itself — replacement cost vs ACV, extended replacement, and why standard limits are almost always wrong on horse properties.</div>
-    </a>
-    <a href="/coverage/barns-structures.html" class="coverage-card">
-      <div class="coverage-card-icon">🏚️</div>
-      <div class="coverage-card-title">Barns &amp; Structures</div>
-      <div class="coverage-card-desc">The most underinsured item on any horse property. How to properly value barns, run-in sheds, arenas, and fencing.</div>
-    </a>
-    <a href="/coverage/liability.html" class="coverage-card">
-      <div class="coverage-card-icon">⚖️</div>
-      <div class="coverage-card-title">Liability Coverage</div>
-      <div class="coverage-card-desc">Horse-related liability is unique. Equine activity liability acts, care-custody-control, and what personal liability doesn't cover.</div>
-    </a>
-    <a href="/coverage/horse-mortality.html" class="coverage-card">
-      <div class="coverage-card-icon">🐴</div>
-      <div class="coverage-card-title">Horse Mortality</div>
-      <div class="coverage-card-desc">Separate from property insurance — equine mortality, major medical, and surgical coverage explained in plain English.</div>
-    </a>
-    <a href="/coverage/equipment.html" class="coverage-card">
-      <div class="coverage-card-icon">🚜</div>
-      <div class="coverage-card-title">Equipment Coverage</div>
-      <div class="coverage-card-desc">Tractors, trailers, ATVs, arena equipment, and farm machinery — what property policies include and what requires a separate rider.</div>
-    </a>
-    <a href="/coverage/income-loss.html" class="coverage-card">
-      <div class="coverage-card-icon">📊</div>
-      <div class="coverage-card-title">Income &amp; Business Loss</div>
-      <div class="coverage-card-desc">Farm income coverage, business interruption, and extra expense — three coverages that commercial operations must carry.</div>
-    </a>
-    <a href="/coverage/farm-ranch.html" class="coverage-card">
-      <div class="coverage-card-icon">🌾</div>
-      <div class="coverage-card-title">Farm &amp; Ranch Policy</div>
-      <div class="coverage-card-desc">When you've outgrown a homeowners policy. What makes a farm &amp; ranch policy different and when you legally need one.</div>
-    </a>
-    <a href="/coverage/umbrella.html" class="coverage-card">
-      <div class="coverage-card-icon">☂️</div>
-      <div class="coverage-card-title">Umbrella Coverage</div>
-      <div class="coverage-card-desc">$1M in underlying liability isn't enough for a boarding facility. Umbrella and excess liability for high-risk equestrian operations.</div>
-    </a>
-  </div>
-</div>
-
-<!-- BUSINESS INSURANCE GAP -->
-<div style="background:var(--primary);color:#fff;padding:48px 16px;">
-  <div style="max-width:var(--max-w);margin:0 auto;display:grid;grid-template-columns:1fr;gap:32px;">
-    <div>
-      <p class="section-label" style="color:var(--gold-bright);">The Most Dangerous Misconception</p>
-      <h2 style="font-size:clamp(22px,4vw,32px);font-weight:700;color:#fff;margin:10px 0 16px;line-height:1.2;">Your Horse Property Insurance Does Not Cover Your Business</h2>
-      <p style="color:rgba(255,255,255,0.8);margin-bottom:14px;">The moment you charge someone to board their horse, give a riding lesson, or offer training services — your homeowners or property policy stops protecting you for that activity. This is not a technicality. It is a specific, intentional exclusion in nearly every residential property policy written.</p>
-      <p style="color:rgba(255,255,255,0.8);margin-bottom:24px;">If a client's horse is injured in your care, if an employee is hurt moving hay, or if a fire destroys the barn while boarding horses — your property policy will deny the claim. You need business insurance, and most horse property owners don't have it.</p>
-      <a href="/business/coverage-gaps.html" class="btn btn-gold">Read: The Complete Coverage Gap Guide →</a>
-    </div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
-      <a href="/business/commercial-general-liability.html" class="coverage-card" style="background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.15);">
-        <div class="coverage-card-icon">📋</div>
-        <div class="coverage-card-title" style="color:#fff;">Commercial Liability</div>
-        <div class="coverage-card-desc" style="color:rgba(255,255,255,0.65);">CGL coverage for boarding, lessons, and training income.</div>
-      </a>
-      <a href="/business/workers-comp.html" class="coverage-card" style="background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.15);">
-        <div class="coverage-card-icon">👷</div>
-        <div class="coverage-card-title" style="color:#fff;">Workers Comp</div>
-        <div class="coverage-card-desc" style="color:rgba(255,255,255,0.65);">Required when you have employees. Farm workers comp rules.</div>
-      </a>
-      <a href="/business/business-income.html" class="coverage-card" style="background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.15);">
-        <div class="coverage-card-icon">💰</div>
-        <div class="coverage-card-title" style="color:#fff;">Business Income</div>
-        <div class="coverage-card-desc" style="color:rgba(255,255,255,0.65);">Replaces lost boarding revenue when you can't operate.</div>
-      </a>
-      <a href="/business/boarding-liability.html" class="coverage-card" style="background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.15);">
-        <div class="coverage-card-icon">🤝</div>
-        <div class="coverage-card-title" style="color:#fff;">Boarding Liability</div>
-        <div class="coverage-card-desc" style="color:rgba(255,255,255,0.65);">Care, custody, and control coverage for horses in your barn.</div>
-      </a>
-    </div>
-  </div>
-</div>
-
-<!-- Q&A PREVIEW -->
-<div style="max-width:var(--max-w);margin:48px auto;padding:0 16px;">
-  <div class="text-center mb-24">
-    <p class="section-label">Quick Answers</p>
-    <h2 class="section-title">Common Horse Property Insurance Questions</h2>
-  </div>
-  <div class="accordion">
-    <div class="accordion-item">
-      <button class="accordion-header">Does homeowners insurance cover a horse barn? <span class="accordion-chevron">▼</span></button>
-      <div class="accordion-body">
-        <p>A standard homeowners policy includes "other structures" coverage — typically 10% of your dwelling limit — which can apply to a barn. But here's the problem: 10% of a $400,000 dwelling limit is $40,000. A basic wood-frame 4-stall barn costs $80,000–$120,000 to replace today. Your barn is almost certainly underinsured under a standard policy.</p>
-        <p>Additionally, if the barn is used for any commercial activity (boarding, lessons, training), the "other structures" coverage may be voided by a business-use exclusion. A dedicated equine property policy with a separately scheduled barn — at full replacement cost — is the correct approach.</p>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <button class="accordion-header">Are horses covered under horse property insurance? <span class="accordion-chevron">▼</span></button>
-      <div class="accordion-body">
-        <p>No. Horses are living animals — they are not covered as property under any standard homeowners or property insurance policy. Horse mortality insurance (and major medical/surgical insurance) is a separate, standalone product purchased from equine specialty insurers.</p>
-        <p>This is one of the most common and devastating misconceptions in horse property insurance. A homeowner loses a $50,000 horse in a barn fire, assumes it's covered, files the claim, and learns the hard way that their property policy doesn't cover livestock mortality.</p>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <button class="accordion-header">What wildfire coverage do I need in Arizona, California, or Colorado? <span class="accordion-chevron">▼</span></button>
-      <div class="accordion-body">
-        <p>Wildfire coverage for horse properties in high-risk states is a moving target. Many admitted carriers have pulled out of certain zip codes entirely. California's FAIR Plan, Arizona's surplus lines market, and Colorado's high-risk pool are increasingly the only options in fire-prone areas.</p>
-        <p>What you need: (1) Structure coverage at full replacement cost — not ACV — because post-fire reconstruction costs surge. (2) Debris removal coverage, which can equal 25–40% of structure value after a wildfire. (3) Additional living expense/business interruption if you operate a boarding or training facility. (4) Equipment replacement, which is almost never adequate under standard limits. See our complete wildfire guide for carrier options by state.</p>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <button class="accordion-header">I board horses at my property — do I need business insurance? <span class="accordion-chevron">▼</span></button>
-      <div class="accordion-body">
-        <p>Yes. The moment you receive payment for boarding, training, lessons, or any equestrian service, you are operating a business — and your homeowners or personal property policy excludes business activities by design.</p>
-        <p>Specifically: if a boarded horse is injured in your care, if a client falls at your facility, or if an employee is injured on the job, your personal property policy will not cover those claims. You need at minimum: a commercial general liability policy, care-custody-and-control coverage for horses in your charge, and workers compensation if you have employees. Most equine insurance specialists can package these into a single farm policy.</p>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <button class="accordion-header">How much does horse property insurance cost? <span class="accordion-chevron">▼</span></button>
-      <div class="accordion-body">
-        <p>Premiums vary dramatically based on property size, structure values, state, wildfire risk zone, and whether you operate a business. General ranges: a hobby farm with a small barn and 2–3 horses in a low-risk zone runs $1,800–$3,500/year. A boarding or training facility with multiple barns, liability, business income, and commercial coverage runs $6,000–$18,000/year. High-risk fire zones add 40–200% to base premiums.</p>
-        <p>The key variables: structure replacement values, liability limits, state of property, business operations on site, number of horses, and fire risk score. The premium difference between a properly written policy and a cheap one is small compared to the gap in coverage at claim time.</p>
-      </div>
-    </div>
-  </div>
-  <p style="text-align:center;margin-top:20px;"><a href="/qa/" class="btn btn-outline" style="background:var(--primary);color:#fff;border:none;">View All 200+ Questions →</a></p>
-</div>
-
-<!-- STATE SECTION -->
-<div style="background:var(--bg-alt);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:40px 16px;">
-  <div style="max-width:var(--max-w);margin:0 auto;">
-    <div class="text-center mb-24">
-      <p class="section-label">State-by-State Guidance</p>
-      <h2 class="section-title">Horse Property Insurance by State</h2>
-      <p style="max-width:640px;margin:0 auto;">Insurance regulations, carrier availability, wildfire risk zones, and equine activity liability laws vary significantly by state. Select your state for specific guidance.</p>
-    </div>
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Horse Property Insurance by State</h2>
+    <p class="section-sub">State-specific coverage requirements, risks, and market conditions</p>
     <div class="state-grid">
-      <a href="/state/arizona.html" class="state-badge">Arizona</a>
-      <a href="/state/texas.html" class="state-badge">Texas</a>
-      <a href="/state/california.html" class="state-badge">California</a>
-      <a href="/state/colorado.html" class="state-badge">Colorado</a>
-      <a href="/state/kentucky.html" class="state-badge">Kentucky</a>
-      <a href="/state/tennessee.html" class="state-badge">Tennessee</a>
-      <a href="/state/florida.html" class="state-badge">Florida</a>
-      <a href="/state/oklahoma.html" class="state-badge">Oklahoma</a>
-      <a href="/state/montana.html" class="state-badge">Montana</a>
-      <a href="/state/wyoming.html" class="state-badge">Wyoming</a>
-      <a href="/state/idaho.html" class="state-badge">Idaho</a>
-      <a href="/state/washington.html" class="state-badge">Washington</a>
-      <a href="/state/oregon.html" class="state-badge">Oregon</a>
-      <a href="/state/new-mexico.html" class="state-badge">New Mexico</a>
-      <a href="/state/georgia.html" class="state-badge">Georgia</a>
+      <a href="/state/arizona/" class="state-link">Arizona</a>
+      <a href="/state/california/" class="state-link">California</a>
+      <a href="/state/colorado/" class="state-link">Colorado</a>
+      <a href="/state/florida/" class="state-link">Florida</a>
+      <a href="/state/idaho/" class="state-link">Idaho</a>
+      <a href="/state/kansas/" class="state-link">Kansas</a>
+      <a href="/state/kentucky/" class="state-link">Kentucky</a>
+      <a href="/state/montana/" class="state-link">Montana</a>
+      <a href="/state/nevada/" class="state-link">Nevada</a>
+      <a href="/state/new-mexico/" class="state-link">New Mexico</a>
+      <a href="/state/oklahoma/" class="state-link">Oklahoma</a>
+      <a href="/state/oregon/" class="state-link">Oregon</a>
+      <a href="/state/tennessee/" class="state-link">Tennessee</a>
+      <a href="/state/texas/" class="state-link">Texas</a>
+      <a href="/state/wyoming/" class="state-link">Wyoming</a>
     </div>
   </div>
-</div>
+</section>
 
-<!-- FOOTER CTA -->
-<div style="max-width:var(--max-w);margin:48px auto;padding:0 16px;">
-  <div class="cta-box">
-    <h3>Start With a Complete Coverage Review</h3>
-    <p>Use our coverage checklist to identify every gap in your current policy — before you need to file a claim.</p>
-    <a href="/guides/" class="btn btn-gold" style="margin-right:10px;">Find My Owner Type →</a>
-    <a href="/business/coverage-gaps.html" class="btn btn-outline">See the Coverage Gaps →</a>
+<section class="section section-alt">
+  <div class="container">
+    <h2 class="section-title">Essential Guides</h2>
+    <p class="section-sub">Deep dives into the most important horse property insurance topics</p>
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-title">How to Choose a Farm &amp; Ranch Policy</div>
+        <div class="card-desc">What to look for, what questions to ask, and how to compare policies for horse properties of any size.</div>
+        <a href="/guides/how-to-choose/">Read Guide →</a>
+      </div>
+      <div class="card">
+        <div class="card-title">Wildfire Coverage for Western Horse Properties</div>
+        <div class="card-desc">Western states face increasing wildfire risk. What coverage exists, what is excluded, and how to protect your property.</div>
+        <a href="/guides/wildfire/">Read Guide →</a>
+      </div>
+      <div class="card">
+        <div class="card-title">Boarding Operations Insurance</div>
+        <div class="card-desc">Taking in boarders changes your insurance needs dramatically. What coverage a boarding barn requires and why.</div>
+        <a href="/guides/boarding/">Read Guide →</a>
+      </div>
+      <div class="card">
+        <div class="card-title">Filing a Horse Property Claim</div>
+        <div class="card-desc">Step-by-step guidance from loss notification through settlement — what to document, what to expect, and your rights.</div>
+        <a href="/claims/">Read Guide →</a>
+      </div>
+      <div class="card">
+        <div class="card-title">Fencing Coverage Explained</div>
+        <div class="card-desc">Miles of fencing represent enormous value. How insurers treat perimeter and cross-fencing and how to ensure adequate coverage.</div>
+        <a href="/coverage/fencing/">Read Guide →</a>
+      </div>
+      <div class="card">
+        <div class="card-title">Reducing Your Premium Without Reducing Coverage</div>
+        <div class="card-desc">Practical steps horse property owners can take to lower premiums through risk mitigation and smart policy structuring.</div>
+        <a href="/guides/reduce-premium/">Read Guide →</a>
+      </div>
+    </div>
   </div>
+</section>
+
+<div class="tip-box container" style="margin:0 auto 0;max-width:var(--max-w);padding:16px 32px;">
+  <strong>About This Site:</strong> HorsePropertyInsurance.com is an educational resource published by <a href="https://www.bridleandbit.com">Bridle &amp; Bit Magazine</a>, Arizona's premier equestrian publication since 1978. We do not sell insurance and are not affiliated with any insurer or agency. All content is for educational purposes only.
 </div>
 
-</main>
-
-<!-- FOOTER -->
-<footer class="site-footer">
-  <div class="footer-inner">
+<footer>
+  <div class="container">
     <div class="footer-grid">
-      <div class="footer-brand">
-        <div class="site-logo" style="margin-bottom:12px;">
-          <div class="logo-icon">🏡</div>
-          <div class="logo-text">
-            <span class="logo-name">HorsePropertyInsurance.com</span>
-            <span class="logo-tag">The Authority Source</span>
-          </div>
-        </div>
-        <p>The most complete independent resource on horse property insurance — from backyard owners to professional operations. Published by Bridle &amp; Bit Magazine.</p>
-      </div>
       <div class="footer-col">
-        <h4>Coverage</h4>
-        <a href="/coverage/dwelling.html">Dwelling</a>
-        <a href="/coverage/barns-structures.html">Barns &amp; Structures</a>
-        <a href="/coverage/liability.html">Liability</a>
-        <a href="/coverage/horse-mortality.html">Horse Mortality</a>
-        <a href="/coverage/equipment.html">Equipment</a>
-        <a href="/coverage/farm-ranch.html">Farm &amp; Ranch</a>
-      </div>
-      <div class="footer-col">
-        <h4>Fire Risks</h4>
-        <a href="/risks/wildfire.html">Wildfire Risk</a>
-        <a href="/risks/barn-fire.html">Barn Fire</a>
-        <a href="/risks/loss-of-horses.html">Loss of Horses</a>
-        <a href="/risks/equipment-loss.html">Equipment Loss</a>
-        <a href="/risks/income-loss.html">Income Loss</a>
-        <a href="/business/coverage-gaps.html">Coverage Gaps</a>
+        <h4>Coverage Types</h4>
+        <a href="/coverage/farm-ranch/">Farm &amp; Ranch</a>
+        <a href="/coverage/barn-structure/">Barn &amp; Structure</a>
+        <a href="/coverage/liability/">Equine Liability</a>
+        <a href="/coverage/agritourism/">Agritourism</a>
+        <a href="/coverage/fencing/">Fencing</a>
+        <a href="/coverage/flood/">Flood</a>
       </div>
       <div class="footer-col">
         <h4>Resources</h4>
-        <a href="/guides/">Owner Guides</a>
-        <a href="/business/">Business Insurance</a>
-        <a href="/qa/">Q&amp;A Library</a>
+        <a href="/qa/">Q&amp;A Database</a>
         <a href="/glossary/">Glossary</a>
-        <a href="/claims/">Claims Help</a>
-        <a href="/state/">By State</a>
+        <a href="/claims/">Claims Guide</a>
+        <a href="/cost/">Cost Guide</a>
+        <a href="/guides/">All Guides</a>
+      </div>
+      <div class="footer-col">
+        <h4>Top States</h4>
+        <a href="/state/arizona/">Arizona</a>
+        <a href="/state/texas/">Texas</a>
+        <a href="/state/california/">California</a>
+        <a href="/state/colorado/">Colorado</a>
+        <a href="/state/florida/">Florida</a>
+        <a href="/state/kentucky/">Kentucky</a>
+      </div>
+      <div class="footer-col">
+        <h4>Bridle &amp; Bit Network</h4>
+        <a href="https://www.bridleandbit.com">Bridle &amp; Bit Magazine</a>
+        <a href="https://horseinsurance.ai">HorseInsurance.ai</a>
+        <a href="https://horsetrainer.ai">HorseTrainer.ai</a>
+        <a href="https://horsecalendar.ai">HorseCalendar.ai</a>
+        <a href="https://reiningsaddles.com">ReiningSaddles.com</a>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2025 HorsePropertyInsurance.com · A Bridle &amp; Bit Publication</span>
-      <span><a href="https://www.bridleandbit.com" style="color:rgba(255,255,255,0.45);">BridleAndBit.com</a></span>
+      &copy; 2025 HorsePropertyInsurance.com &mdash; A <a href="https://www.bridleandbit.com">Bridle &amp; Bit Magazine</a> Property &mdash; Educational purposes only. Not insurance advice.
     </div>
-    <p class="footer-disclaimer">HorsePropertyInsurance.com is an educational resource. We are not insurance agents and do not sell insurance products. All content is for informational purposes only. Coverage terms, exclusions, and availability vary by carrier, state, and policy. Consult a licensed insurance professional for advice specific to your situation.</p>
   </div>
 </footer>
 
 <script>
-const toggle = document.getElementById('navToggle');
-const nav = document.getElementById('mainNav');
-toggle.addEventListener('click', () => {
-  const open = nav.classList.toggle('open');
-  toggle.classList.toggle('open', open);
-  toggle.setAttribute('aria-expanded', open);
-});
-document.querySelectorAll('.accordion-header').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const body = btn.nextElementSibling;
-    const isOpen = btn.classList.contains('open');
-    document.querySelectorAll('.accordion-header').forEach(b => {
-      b.classList.remove('open');
-      b.nextElementSibling.classList.remove('open');
-    });
-    if (!isOpen) {
-      btn.classList.add('open');
-      body.classList.add('open');
+function toggleQA(el){
+  const item=el.closest('.qa-item');
+  item.classList.toggle('open');
+}
+function filterQA(cat,btn){
+  document.querySelectorAll('.qa-filter').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.qa-item').forEach(item=>{
+    if(cat==='all'||item.dataset.cat===cat){
+      item.style.display='';
+    } else {
+      item.style.display='none';
     }
   });
-});
+}
 </script>
-
 </body>
 </html>
