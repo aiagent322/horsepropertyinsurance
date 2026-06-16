@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Horse Property Insurance Premium Calculator | HorsePropertyInsurance.com</title>
+<meta name="description" content="Estimate your horse property insurance premium — enter your property details and get an instant estimated annual premium range for farm and ranch coverage.">
+<link rel="canonical" href="https://horsepropertyinsurance.com/calculator/">
+<style>
+:root{
+  --primary:#0b3c5d;
+  --primary-light:#144e78;
+  --secondary:#1d6fa5;
+  --accent:#2a8fd4;
+  --gold:#b8860b;
+  --bg:#ffffff;
+  --bg-alt:#f4f6f8;
+  --text:#1f2933;
+  --text-mid:#4a5568;
+  --text-light:#6b7280;
+  --border:#e5e7eb;
+  --success:#047857;
+  --warning:#b45309;
+  --radius:6px;
+  --max-w:860px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+a{color:var(--secondary);text-decoration:none;}
+a:hover{color:var(--primary);text-decoration:underline;}
+.container{max-width:var(--max-w);margin:0 auto;padding:0 16px;}
+
+/* HEADER */
+.site-header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.97);border-bottom:1px solid var(--border);backdrop-filter:blur(8px);}
+.header-top{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;}
+.site-logo{font-size:1.1rem;font-weight:700;color:var(--primary);letter-spacing:-0.02em;text-decoration:none;}
+.site-logo span{color:var(--secondary);}
+.nav-toggle{background:none;border:none;cursor:pointer;padding:6px;color:var(--primary);}
+.nav-toggle svg{width:22px;height:22px;}
+.main-nav{display:none;flex-direction:column;padding:0 16px 12px;gap:2px;}
+.main-nav.open{display:flex;}
+.main-nav a{padding:8px 4px;color:var(--text);font-size:.9rem;border-bottom:1px solid #f0f1f3;}
+@media(min-width:768px){
+  .nav-toggle{display:none;}
+  .main-nav{display:flex;flex-direction:row;padding:0 24px 10px;gap:0;}
+  .main-nav a{padding:6px 12px;border-bottom:none;font-size:.88rem;}
+}
+
+/* HERO */
+.calc-hero{background:linear-gradient(135deg,var(--primary) 0%,var(--primary-light) 60%,var(--secondary) 100%);color:#fff;padding:36px 16px 40px;text-align:center;}
+.calc-hero h1{font-size:1.6rem;font-weight:800;margin-bottom:8px;}
+.calc-hero p{font-size:.95rem;opacity:.9;max-width:560px;margin:0 auto;}
+@media(min-width:600px){
+  .calc-hero h1{font-size:2.1rem;}
+  .calc-hero p{font-size:1rem;}
+}
+
+/* CALCULATOR */
+.calc-wrap{max-width:var(--max-w);margin:0 auto;padding:32px 16px 48px;}
+.calc-grid{display:grid;grid-template-columns:1fr;gap:24px;}
+@media(min-width:700px){.calc-grid{grid-template-columns:1fr 1fr;}}
+
+.calc-section{background:#fff;border:1px solid var(--border);border-radius:8px;padding:20px;}
+.calc-section-title{font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--primary);margin-bottom:16px;padding-bottom:8px;border-bottom:2px solid var(--primary);}
+
+.field{margin-bottom:16px;}
+.field label{display:block;font-size:.88rem;font-weight:600;color:var(--text);margin-bottom:5px;}
+.field select,.field input[type="range"]{width:100%;border:1px solid var(--border);border-radius:var(--radius);padding:9px 12px;font-size:.9rem;color:var(--text);background:#fff;appearance:none;-webkit-appearance:none;}
+.field select:focus,.field input:focus{outline:2px solid var(--secondary);outline-offset:1px;}
+.field .range-wrap{position:relative;}
+.field input[type="range"]{padding:6px 0;cursor:pointer;accent-color:var(--primary);}
+.field .range-labels{display:flex;justify-content:space-between;font-size:.75rem;color:var(--text-light);margin-top:2px;}
+.field .range-value{font-size:1rem;font-weight:700;color:var(--primary);margin-bottom:4px;}
+
+/* CHECKBOX GRID */
+.checkbox-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+.check-item{display:flex;align-items:flex-start;gap:8px;cursor:pointer;}
+.check-item input[type="checkbox"]{margin-top:3px;accent-color:var(--primary);width:16px;height:16px;flex-shrink:0;cursor:pointer;}
+.check-item span{font-size:.85rem;color:var(--text-mid);line-height:1.4;}
+
+/* RESULT */
+.result-panel{background:var(--primary);color:#fff;border-radius:8px;padding:24px;text-align:center;position:sticky;top:80px;}
+.result-label{font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;opacity:.8;margin-bottom:8px;}
+.result-range{font-size:2.2rem;font-weight:800;line-height:1.1;margin-bottom:4px;}
+.result-period{font-size:.85rem;opacity:.8;margin-bottom:20px;}
+.result-breakdown{background:rgba(255,255,255,0.1);border-radius:6px;padding:14px;text-align:left;margin-bottom:16px;}
+.result-breakdown-title{font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;opacity:.7;margin-bottom:10px;}
+.breakdown-row{display:flex;justify-content:space-between;font-size:.83rem;padding:3px 0;border-bottom:1px solid rgba(255,255,255,0.1);}
+.breakdown-row:last-child{border-bottom:none;}
+.breakdown-row .label{opacity:.85;}
+.breakdown-row .value{font-weight:600;}
+.result-factors{margin-top:14px;text-align:left;}
+.result-factors-title{font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;opacity:.7;margin-bottom:8px;}
+.factor-tag{display:inline-block;background:rgba(255,255,255,0.15);border-radius:12px;padding:3px 10px;font-size:.75rem;margin:2px;}
+.factor-tag.risk-high{background:rgba(185,28,28,0.4);}
+.factor-tag.risk-med{background:rgba(180,83,9,0.4);}
+.factor-tag.risk-low{background:rgba(4,120,87,0.4);}
+.disclaimer-text{font-size:.75rem;opacity:.6;line-height:1.4;margin-top:14px;}
+.recalc-btn{width:100%;background:#fff;color:var(--primary);border:none;border-radius:6px;padding:11px;font-size:.9rem;font-weight:700;cursor:pointer;margin-top:12px;transition:opacity .2s;}
+.recalc-btn:hover{opacity:.9;}
+
+/* TIPS */
+.tips-section{max-width:var(--max-w);margin:0 auto;padding:0 16px 48px;}
+.tips-grid{display:grid;grid-template-columns:1fr;gap:14px;}
+@media(min-width:600px){.tips-grid{grid-template-columns:repeat(2,1fr);}}
+@media(min-width:900px){.tips-grid{grid-template-columns:repeat(3,1fr);}}
+.tip-card{border:1px solid var(--border);border-radius:var(--radius);padding:16px;}
+.tip-card-icon{font-size:1.4rem;margin-bottom:8px;}
+.tip-card-title{font-size:.9rem;font-weight:700;color:var(--primary);margin-bottom:4px;}
+.tip-card-desc{font-size:.83rem;color:var(--text-mid);}
+
+footer{background:var(--primary);color:rgba(255,255,255,.8);padding:32px 16px;margin-top:0;}
+.footer-inner{max-width:var(--max-w);margin:0 auto;text-align:center;font-size:.83rem;}
+.footer-inner a{color:rgba(255,255,255,.7);}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-top">
+    <a href="/" class="site-logo">HorseProperty<span>Insurance.com</span></a>
+    <button class="nav-toggle" onclick="this.setAttribute('aria-expanded',this.getAttribute('aria-expanded')==='true'?'false':'true');document.querySelector('.main-nav').classList.toggle('open')" aria-label="Toggle navigation" aria-expanded="false">
+      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+  <nav class="main-nav">
+    <a href="/coverage/">Coverage</a>
+    <a href="/companies/">Companies</a>
+    <a href="/state/">By State</a>
+    <a href="/qa/">Q&amp;A</a>
+    <a href="/claims/">Claims</a>
+    <a href="/calculator/">Calculator</a>
+  </nav>
+</header>
+
+<div class="calc-hero">
+  <div class="container">
+    <h1>Horse Property Insurance<br>Premium Calculator</h1>
+    <p>Get an estimated annual premium range based on your property details. Adjust inputs and results update instantly.</p>
+  </div>
+</div>
+
+<div class="calc-wrap">
+  <div style="display:grid;grid-template-columns:1fr;gap:24px;" id="calc-layout">
+
+    <!-- LEFT: INPUTS -->
+    <div style="display:grid;grid-template-columns:1fr;gap:16px;" id="inputs-col">
+
+      <div class="calc-section">
+        <div class="calc-section-title">Property Details</div>
+
+        <div class="field">
+          <label for="state-sel">State</label>
+          <select id="state-sel" onchange="calc()">
+            <option value="low">Low Risk State (Midwest/Southeast)</option>
+            <option value="med" selected>Moderate Risk State</option>
+            <option value="high">High Risk State (CA, CO, AZ, FL, TX, OK)</option>
+            <option value="extreme">Extreme Risk Zone (Wildfire/Hurricane)</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label>Total Structure Value (Barns, Arena, Outbuildings)</label>
+          <div class="range-value" id="struct-val-display">$200,000</div>
+          <div class="range-wrap">
+            <input type="range" id="struct-val" min="25000" max="1500000" step="25000" value="200000" oninput="updateDisplay('struct-val','struct-val-display','$',0);calc()">
+            <div class="range-labels"><span>$25k</span><span>$1.5M</span></div>
+          </div>
+        </div>
+
+        <div class="field">
+          <label>Acreage</label>
+          <select id="acreage" onchange="calc()">
+            <option value="1">Under 5 acres</option>
+            <option value="1.05">5–10 acres</option>
+            <option value="1.1" selected>10–25 acres</option>
+            <option value="1.18">25–50 acres</option>
+            <option value="1.28">50–100 acres</option>
+            <option value="1.4">100–500 acres</option>
+            <option value="1.55">500+ acres</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label>Number of Horses on Property</label>
+          <select id="horses" onchange="calc()">
+            <option value="1">1–2 horses</option>
+            <option value="1.05" selected>3–5 horses</option>
+            <option value="1.12">6–10 horses</option>
+            <option value="1.2">11–20 horses</option>
+            <option value="1.35">21–50 horses</option>
+            <option value="1.5">50+ horses</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="calc-section">
+        <div class="calc-section-title">Commercial Activity</div>
+        <div class="field">
+          <label>Primary Operation Type</label>
+          <select id="operation" onchange="calc()">
+            <option value="1">Private pleasure — no commercial activity</option>
+            <option value="1.25">Hobby boarding (1–5 horses for others)</option>
+            <option value="1.45" selected>Boarding operation</option>
+            <option value="1.55">Training or lesson operation</option>
+            <option value="1.7">Breeding farm</option>
+            <option value="1.85">Competition or show facility</option>
+            <option value="2.1">Large commercial equestrian center</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label>Additional Activities (select all that apply)</label>
+          <div class="checkbox-grid">
+            <label class="check-item"><input type="checkbox" value="0.08" onchange="calc()"><span>Trail rides / agritourism</span></label>
+            <label class="check-item"><input type="checkbox" value="0.06" onchange="calc()"><span>Horse shows / events</span></label>
+            <label class="check-item"><input type="checkbox" value="0.05" onchange="calc()"><span>Youth programs / camps</span></label>
+            <label class="check-item"><input type="checkbox" value="0.07" onchange="calc()"><span>Public arena rental</span></label>
+            <label class="check-item"><input type="checkbox" value="0.04" onchange="calc()"><span>Clinics / visiting trainers</span></label>
+            <label class="check-item"><input type="checkbox" value="0.09" onchange="calc()"><span>Breeding / stallion service</span></label>
+          </div>
+        </div>
+      </div>
+
+      <div class="calc-section">
+        <div class="calc-section-title">Risk Factors</div>
+
+        <div class="field">
+          <label>Wildfire / Natural Disaster Exposure</label>
+          <select id="disaster" onchange="calc()">
+            <option value="1">Low — flat terrain, urban fringe</option>
+            <option value="1.15" selected>Moderate — some exposure</option>
+            <option value="1.35">High — wildfire or tornado zone</option>
+            <option value="1.65">Very High — designated high-risk zone</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label>Liability Limit Desired</label>
+          <select id="liability" onchange="calc()">
+            <option value="0.9">$300,000</option>
+            <option value="1" selected>$500,000</option>
+            <option value="1.1">$1,000,000</option>
+            <option value="1.2">$2,000,000</option>
+            <option value="1.35">$5,000,000 (with umbrella)</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label>Claims History (past 5 years)</label>
+          <select id="claims" onchange="calc()">
+            <option value="0.95">No claims — clean history</option>
+            <option value="1" selected>1 minor claim</option>
+            <option value="1.18">2 claims</option>
+            <option value="1.38">3+ claims or 1 large loss</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label>Risk Mitigation (select all that apply)</label>
+          <div class="checkbox-grid">
+            <label class="check-item"><input type="checkbox" value="-0.06" onchange="calc()"><span>Monitored fire detection in barn</span></label>
+            <label class="check-item"><input type="checkbox" value="-0.05" onchange="calc()"><span>Metal / Class 4 impact roof</span></label>
+            <label class="check-item"><input type="checkbox" value="-0.04" onchange="calc()"><span>Documented defensible space</span></label>
+            <label class="check-item"><input type="checkbox" value="-0.03" onchange="calc()"><span>Gated / secured property</span></label>
+            <label class="check-item"><input type="checkbox" value="-0.03" onchange="calc()"><span>Auto sprinkler system</span></label>
+            <label class="check-item"><input type="checkbox" value="-0.04" onchange="calc()"><span>Bundling with auto policy</span></label>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- RIGHT: RESULT -->
+    <div id="result-col">
+      <div class="result-panel" id="result-panel">
+        <div class="result-label">Estimated Annual Premium</div>
+        <div class="result-range" id="result-range">—</div>
+        <div class="result-period">per year</div>
+        <div class="result-breakdown" id="result-breakdown"></div>
+        <div class="result-factors" id="result-factors"></div>
+        <div class="disclaimer-text">Estimates only. Actual premiums vary by carrier, specific property, underwriting, and state regulations. Obtain quotes from licensed agents for accurate pricing.</div>
+        <button class="recalc-btn" onclick="calc()">Recalculate</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- TIPS -->
+<div class="tips-section">
+  <h2 style="color:var(--primary);font-size:1.2rem;margin-bottom:16px;">Ways to Lower Your Premium</h2>
+  <div class="tips-grid">
+    <div class="tip-card"><div class="tip-card-icon">🔥</div><div class="tip-card-title">Install Fire Detection</div><div class="tip-card-desc">Monitored smoke and heat detection in barns can reduce premiums 5–15% with most carriers.</div></div>
+    <div class="tip-card"><div class="tip-card-icon">🏗️</div><div class="tip-card-title">Upgrade to Metal Roofing</div><div class="tip-card-desc">Class 4 impact-resistant metal roofing qualifies for hail discounts in tornado-prone states.</div></div>
+    <div class="tip-card"><div class="tip-card-icon">🌿</div><div class="tip-card-title">Maintain Defensible Space</div><div class="tip-card-desc">Documented fire mitigation supports coverage in wildfire zones and may reduce premiums.</div></div>
+    <div class="tip-card"><div class="tip-card-icon">📋</div><div class="tip-card-title">Raise Your Deductible</div><div class="tip-card-desc">Increasing from $1,000 to $5,000 can reduce premiums 10–20%. Self-insure small losses.</div></div>
+    <div class="tip-card"><div class="tip-card-icon">🤝</div><div class="tip-card-title">Bundle Policies</div><div class="tip-card-desc">Placing farm and auto with the same carrier typically produces 5–15% multi-policy discounts.</div></div>
+    <div class="tip-card"><div class="tip-card-icon">🏆</div><div class="tip-card-title">Maintain Clean Claims History</div><div class="tip-card-desc">Avoid filing small claims. A clean 5-year history is one of the most valuable premium reducers.</div></div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <p><a href="/">HorsePropertyInsurance.com</a> &mdash; A <a href="https://www.bridleandbit.com">Bridle &amp; Bit Magazine</a> property &mdash; Educational purposes only. Not insurance advice.</p>
+  </div>
+</footer>
+
+<script>
+// Base rates by state risk level (% of structure value annually)
+const BASE_RATES = {
+  low:     { min: 0.0055, max: 0.0085 },
+  med:     { min: 0.0070, max: 0.0110 },
+  high:    { min: 0.0090, max: 0.0150 },
+  extreme: { min: 0.0130, max: 0.0220 }
+};
+
+// Minimum premiums by state risk
+const MIN_PREMIUMS = {
+  low: 900, med: 1200, high: 1600, extreme: 2400
+};
+
+function fmt(n) {
+  if (n >= 1000000) return '$' + (n/1000000).toFixed(1) + 'M';
+  if (n >= 1000) return '$' + Math.round(n/100)*100 < 10000
+    ? '$' + (Math.round(n/100)*100).toLocaleString()
+    : '$' + (Math.round(n/500)*500).toLocaleString();
+  return '$' + n.toLocaleString();
+}
+
+function fmtRange(lo, hi) {
+  // Round to nearest $100
+  lo = Math.round(lo / 100) * 100;
+  hi = Math.round(hi / 100) * 100;
+  return fmt(lo) + ' – ' + fmt(hi);
+}
+
+function updateDisplay(inputId, displayId, prefix, decimals) {
+  const val = parseFloat(document.getElementById(inputId).value);
+  let display;
+  if (prefix === '$') {
+    display = '$' + val.toLocaleString();
+  } else {
+    display = prefix + val.toFixed(decimals);
+  }
+  document.getElementById(displayId).textContent = display;
+}
+
+function calc() {
+  const stateRisk = document.getElementById('state-sel').value;
+  const structVal = parseFloat(document.getElementById('struct-val').value);
+  const acreageMult = parseFloat(document.getElementById('acreage').value);
+  const horsesMult = parseFloat(document.getElementById('horses').value);
+  const opMult = parseFloat(document.getElementById('operation').value);
+  const disasterMult = parseFloat(document.getElementById('disaster').value);
+  const liabMult = parseFloat(document.getElementById('liability').value);
+  const claimsMult = parseFloat(document.getElementById('claims').value);
+
+  // Sum activity addons
+  let activityAdd = 0;
+  document.querySelectorAll('.checkbox-grid input[type="checkbox"]:checked').forEach(cb => {
+    activityAdd += parseFloat(cb.value);
+  });
+
+  const base = BASE_RATES[stateRisk];
+  const minPrem = MIN_PREMIUMS[stateRisk];
+
+  // Calculate base structure premium
+  let loBase = structVal * base.min;
+  let hiBase = structVal * base.max;
+
+  // Apply multipliers
+  const totalMult = acreageMult * horsesMult * opMult * disasterMult * liabMult * claimsMult * (1 + activityAdd);
+
+  let lo = Math.max(loBase * totalMult, minPrem);
+  let hi = Math.max(hiBase * totalMult, minPrem * 1.4);
+
+  // Ensure hi > lo by at least 20%
+  if (hi < lo * 1.15) hi = lo * 1.25;
+
+  // Build breakdown
+  const structPremLo = Math.round(structVal * base.min * 0.55);
+  const structPremHi = Math.round(structVal * base.max * 0.55);
+  const liabPremLo = Math.round(lo * 0.18);
+  const liabPremHi = Math.round(hi * 0.18);
+  const equipPremLo = Math.round(lo * 0.10);
+  const equipPremHi = Math.round(hi * 0.10);
+  const otherLo = Math.round(lo * 0.17);
+  const otherHi = Math.round(hi * 0.17);
+
+  document.getElementById('result-range').textContent = fmtRange(lo, hi);
+
+  document.getElementById('result-breakdown').innerHTML = `
+    <div class="result-breakdown-title">Estimated Component Breakdown</div>
+    <div class="breakdown-row"><span class="label">Farm Structures</span><span class="value">${fmtRange(structPremLo, structPremHi)}</span></div>
+    <div class="breakdown-row"><span class="label">Farm Liability</span><span class="value">${fmtRange(liabPremLo, liabPremHi)}</span></div>
+    <div class="breakdown-row"><span class="label">Equipment & Personal Property</span><span class="value">${fmtRange(equipPremLo, equipPremHi)}</span></div>
+    <div class="breakdown-row"><span class="label">Other Coverage Elements</span><span class="value">${fmtRange(otherLo, otherHi)}</span></div>
+  `;
+
+  // Risk factors
+  const factors = [];
+  if (stateRisk === 'high' || stateRisk === 'extreme') factors.push({label: 'High-risk state', level: 'risk-high'});
+  if (parseFloat(document.getElementById('disaster').value) >= 1.35) factors.push({label: 'Natural disaster zone', level: 'risk-high'});
+  if (parseFloat(document.getElementById('operation').value) >= 1.55) factors.push({label: 'Commercial operation', level: 'risk-med'});
+  if (activityAdd >= 0.1) factors.push({label: 'Multiple activities', level: 'risk-med'});
+  if (parseFloat(document.getElementById('claims').value) >= 1.18) factors.push({label: 'Claims history', level: 'risk-med'});
+  if (parseFloat(document.getElementById('operation').value) === 1) factors.push({label: 'Private pleasure', level: 'risk-low'});
+
+  // Mitigation tags
+  document.querySelectorAll('#inputs-col .checkbox-grid input:checked').forEach(cb => {
+    if (parseFloat(cb.value) < 0) {
+      factors.push({label: cb.nextElementSibling.textContent.trim(), level: 'risk-low'});
+    }
+  });
+
+  if (factors.length > 0) {
+    document.getElementById('result-factors').innerHTML = `
+      <div class="result-factors-title">Your Key Factors</div>
+      ${factors.map(f => `<span class="factor-tag ${f.level}">${f.label}</span>`).join('')}
+    `;
+  } else {
+    document.getElementById('result-factors').innerHTML = '';
+  }
+}
+
+// Responsive layout — stack on mobile, side-by-side on desktop
+function setLayout() {
+  const layout = document.getElementById('calc-layout');
+  const result = document.getElementById('result-col');
+  if (window.innerWidth >= 700) {
+    layout.style.gridTemplateColumns = '1fr 320px';
+    result.style.position = 'relative';
+  } else {
+    layout.style.gridTemplateColumns = '1fr';
+    // Move result panel to top on mobile
+    const inputs = document.getElementById('inputs-col');
+    if (result.nextSibling !== null) {
+      layout.insertBefore(result, inputs);
+    }
+  }
+}
+
+window.addEventListener('resize', setLayout);
+setLayout();
+
+// Initial calculation
+calc();
+</script>
+</body>
+</html>
