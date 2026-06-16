@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Horse Property Insurance Claims Checklist | HorsePropertyInsurance.com</title>
+<meta name="description" content="Printable horse property insurance claims checklist — step-by-step actions after a barn fire, storm damage, or other loss. Save this before you need it.">
+<link rel="canonical" href="https://horsepropertyinsurance.com/claims/checklist/">
+<style>
+:root{
+  --primary:#0b3c5d;
+  --primary-light:#144e78;
+  --secondary:#1d6fa5;
+  --success:#047857;
+  --warning:#b45309;
+  --danger:#b91c1c;
+  --bg:#ffffff;
+  --bg-alt:#f4f6f8;
+  --text:#1f2933;
+  --text-mid:#4a5568;
+  --text-light:#6b7280;
+  --border:#e5e7eb;
+  --radius:6px;
+  --max-w:820px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased;}
+a{color:var(--secondary);text-decoration:none;}
+a:hover{color:var(--primary);text-decoration:underline;}
+.container{max-width:var(--max-w);margin:0 auto;padding:0 16px;}
+
+/* HEADER */
+.site-header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.97);border-bottom:1px solid var(--border);backdrop-filter:blur(8px);}
+.header-top{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;}
+.site-logo{font-size:1.1rem;font-weight:700;color:var(--primary);text-decoration:none;}
+.site-logo span{color:var(--secondary);}
+.nav-toggle{background:none;border:none;cursor:pointer;padding:6px;color:var(--primary);}
+.nav-toggle svg{width:22px;height:22px;}
+.main-nav{display:none;flex-direction:column;padding:0 16px 12px;gap:2px;}
+.main-nav.open{display:flex;}
+.main-nav a{padding:8px 4px;color:var(--text);font-size:.9rem;border-bottom:1px solid #f0f1f3;}
+@media(min-width:768px){
+  .nav-toggle{display:none;}
+  .main-nav{display:flex;flex-direction:row;padding:0 24px 10px;gap:0;}
+  .main-nav a{padding:6px 12px;border-bottom:none;font-size:.88rem;}
+}
+
+/* HERO */
+.hero{background:linear-gradient(135deg,var(--primary) 0%,var(--primary-light) 60%,var(--secondary) 100%);color:#fff;padding:36px 16px 40px;}
+.hero h1{font-size:1.6rem;font-weight:800;margin-bottom:8px;}
+.hero p{font-size:.95rem;opacity:.9;max-width:580px;}
+.hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px;}
+.hero-btn{display:inline-block;padding:10px 18px;border-radius:var(--radius);font-weight:600;font-size:.85rem;cursor:pointer;border:none;}
+.btn-white{background:#fff;color:var(--primary);}
+.btn-outline{background:transparent;color:#fff;border:2px solid rgba(255,255,255,0.6);}
+@media(min-width:600px){.hero h1{font-size:2rem;}}
+
+/* PROGRESS */
+.progress-bar{background:var(--bg-alt);border-bottom:1px solid var(--border);padding:12px 16px;position:sticky;top:57px;z-index:99;}
+.progress-inner{max-width:var(--max-w);margin:0 auto;display:flex;align-items:center;gap:12px;}
+.progress-track{flex:1;background:#e5e7eb;border-radius:99px;height:8px;overflow:hidden;}
+.progress-fill{height:100%;background:var(--success);border-radius:99px;transition:width .3s;}
+.progress-label{font-size:.83rem;font-weight:600;color:var(--primary);white-space:nowrap;}
+@media(min-width:600px){.progress-bar{top:62px;}}
+
+/* MAIN */
+.checklist-wrap{max-width:var(--max-w);margin:0 auto;padding:28px 16px 48px;}
+
+/* PHASE */
+.phase{margin-bottom:32px;}
+.phase-header{display:flex;align-items:center;gap:12px;margin-bottom:16px;padding:14px 16px;border-radius:8px;cursor:pointer;}
+.phase-header-immediate{background:#fef2f2;border:1px solid #fecaca;}
+.phase-header-first24{background:#fff7ed;border:1px solid #fed7aa;}
+.phase-header-week1{background:#f0fdf4;border:1px solid #bbf7d0;}
+.phase-header-ongoing{background:#eff6ff;border:1px solid #bfdbfe;}
+.phase-icon{font-size:1.6rem;flex-shrink:0;}
+.phase-title{font-size:1rem;font-weight:700;}
+.phase-title-immediate{color:#b91c1c;}
+.phase-title-first24{color:#92400e;}
+.phase-title-week1{color:#065f46;}
+.phase-title-ongoing{color:#1e40af;}
+.phase-subtitle{font-size:.82rem;margin-top:2px;opacity:.8;}
+.phase-count{margin-left:auto;font-size:.78rem;font-weight:600;opacity:.7;white-space:nowrap;}
+
+/* CHECKLIST ITEMS */
+.check-list{display:flex;flex-direction:column;gap:8px;}
+.check-item{display:flex;align-items:flex-start;gap:12px;padding:12px 14px;background:#fff;border:1px solid var(--border);border-radius:var(--radius);cursor:pointer;transition:all .15s;-webkit-tap-highlight-color:transparent;}
+.check-item:hover{border-color:var(--secondary);background:#f8fbff;}
+.check-item.done{background:#f0fdf4;border-color:#86efac;}
+.check-item.done .check-text{text-decoration:line-through;color:var(--text-light);}
+.check-item.done .check-note{text-decoration:line-through;color:var(--text-light);}
+.check-box{width:22px;height:22px;border:2px solid var(--border);border-radius:4px;flex-shrink:0;margin-top:1px;display:flex;align-items:center;justify-content:center;transition:all .15s;background:#fff;}
+.check-item.done .check-box{background:var(--success);border-color:var(--success);}
+.check-box svg{display:none;width:14px;height:14px;}
+.check-item.done .check-box svg{display:block;}
+.check-content{flex:1;min-width:0;}
+.check-text{font-size:.92rem;font-weight:600;color:var(--text);line-height:1.4;}
+.check-note{font-size:.82rem;color:var(--text-mid);margin-top:3px;line-height:1.4;}
+.check-urgent{display:inline-block;background:#fef2f2;color:#b91c1c;font-size:.72rem;font-weight:700;padding:1px 7px;border-radius:10px;margin-left:6px;vertical-align:middle;}
+.check-tip{display:inline-block;background:#eff6ff;color:#1e40af;font-size:.72rem;font-weight:700;padding:1px 7px;border-radius:10px;margin-left:6px;vertical-align:middle;}
+
+/* NOTES AREA */
+.notes-section{margin-top:32px;padding:20px;background:var(--bg-alt);border-radius:8px;border:1px solid var(--border);}
+.notes-title{font-size:.9rem;font-weight:700;color:var(--primary);margin-bottom:10px;}
+.notes-grid{display:grid;grid-template-columns:1fr;gap:12px;}
+@media(min-width:600px){.notes-grid{grid-template-columns:1fr 1fr;}}
+.note-field label{display:block;font-size:.8rem;font-weight:600;color:var(--text-mid);margin-bottom:4px;}
+.note-field input,.note-field textarea{width:100%;border:1px solid var(--border);border-radius:4px;padding:8px 10px;font-size:.88rem;font-family:inherit;background:#fff;}
+.note-field textarea{height:70px;resize:vertical;}
+
+/* EMERGENCY CONTACTS */
+.contacts-section{margin-top:24px;padding:20px;background:#fff;border:1px solid var(--border);border-radius:8px;}
+.contacts-title{font-size:.9rem;font-weight:700;color:var(--primary);margin-bottom:12px;}
+.contact-row{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px;}
+.contact-row input{border:1px solid var(--border);border-radius:4px;padding:7px 10px;font-size:.85rem;font-family:inherit;}
+.contact-row input::placeholder{color:var(--text-light);}
+
+/* COMPLETE STATE */
+.complete-banner{display:none;background:var(--success);color:#fff;border-radius:8px;padding:20px;text-align:center;margin-top:24px;}
+.complete-banner.show{display:block;}
+.complete-banner h3{font-size:1.1rem;font-weight:700;margin-bottom:4px;}
+.complete-banner p{font-size:.88rem;opacity:.9;}
+
+/* PRINT */
+@media print {
+  .site-header,.progress-bar,.hero-actions,.no-print{display:none!important;}
+  .hero{background:#0b3c5d!important;-webkit-print-color-adjust:exact;print-color-adjust:exact;padding:20px!important;}
+  .check-item{break-inside:avoid;}
+  .phase{break-inside:avoid;}
+  body{font-size:12px;}
+  .check-text{font-size:.85rem;}
+  .check-note{font-size:.75rem;}
+}
+
+footer{background:var(--primary);color:rgba(255,255,255,.8);padding:28px 16px;margin-top:0;}
+.footer-inner{max-width:var(--max-w);margin:0 auto;text-align:center;font-size:.83rem;}
+.footer-inner a{color:rgba(255,255,255,.7);}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-top">
+    <a href="/" class="site-logo">HorseProperty<span>Insurance.com</span></a>
+    <button class="nav-toggle" onclick="this.setAttribute('aria-expanded',this.getAttribute('aria-expanded')==='true'?'false':'true');document.querySelector('.main-nav').classList.toggle('open')" aria-label="Toggle navigation" aria-expanded="false">
+      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+  <nav class="main-nav">
+    <a href="/coverage/">Coverage</a>
+    <a href="/companies/">Companies</a>
+    <a href="/state/">By State</a>
+    <a href="/qa/">Q&amp;A</a>
+    <a href="/claims/">Claims</a>
+    <a href="/calculator/">Calculator</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="container">
+    <h1>Horse Property Insurance<br>Claims Checklist</h1>
+    <p>Step-by-step actions after a barn fire, storm damage, or other loss. Check items off as you complete them. Save or print this page before you need it.</p>
+    <div class="hero-actions">
+      <button class="hero-btn btn-white no-print" onclick="window.print()">🖨️ Print Checklist</button>
+      <button class="hero-btn btn-outline no-print" onclick="resetAll()">↺ Reset All</button>
+    </div>
+  </div>
+</div>
+
+<div class="progress-bar">
+  <div class="progress-inner">
+    <div class="progress-track"><div class="progress-fill" id="progress-fill" style="width:0%"></div></div>
+    <div class="progress-label" id="progress-label">0 of 40 complete</div>
+  </div>
+</div>
+
+<div class="checklist-wrap">
+
+  <!-- PHASE 1: IMMEDIATE -->
+  <div class="phase">
+    <div class="phase-header phase-header-immediate">
+      <div class="phase-icon">🚨</div>
+      <div>
+        <div class="phase-title phase-title-immediate">Phase 1 — Immediate (First 30 Minutes)</div>
+        <div class="phase-subtitle">Life and animal safety before anything else</div>
+      </div>
+      <div class="phase-count" id="count-p1">0/8</div>
+    </div>
+    <div class="check-list" id="phase-1">
+      <div class="check-item" onclick="toggle(this,'p1')" data-phase="p1">
+        <div class="check-box"><svg viewBox="0 0 12 10" fill="none" stroke="#fff" stroke-width="2.5"><polyline points="1,5 4.5,8.5 11,1"/></svg></div>
+        <div class="check-content">
+          <div class="check-text">Ensure all people are safe and accounted for <span class="check-urgent">FIRST</span></div>
+          <div class="check-note">Do not enter a burning or structurally compromised building for any reason.</div>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggle(this,'p1')" data-phase="p1">
+        <div class="check-box"><svg viewBox="0 0 12 10" fill="none" stroke="#fff" stroke-width="2.5"><polyline points="1,5 4.5,8.5 11,1"/></svg></div>
+        <div class="check-content">
+          <div class="check-text">Call 911 if fire, injury, or immediate danger</div>
+          <div class="check-note">Fire department, ambulance, or law enforcement as appropriate to the situation.</div>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggle(this,'p1')" data-phase="p1">
+        <div class="check-box"><svg viewBox="0 0 12 10" fill="none" stroke="#fff" stroke-width="2.5"><polyline points="1,5 4.5,8.5 11,1"/></svg></div>
+        <div class="check-content">
+          <div class="check-text">Move horses and livestock to safe location</div>
+          <div class="check-note">Move animals away from damaged structures, smoke, debris, or standing water. Have a pre-planned evacuation destination.</div>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggle(this,'p1')" data-phase="p1">
+        <div class="check-box"><svg viewBox="0 0 12 10" fill="none" stroke="#fff" stroke-width="2.5"><polyline points="1,5 4.5,8.5 11,1"/></svg></div>
+        <div class="check-content">
+          <div class="check-text">Secure the property perimeter</div>
+          <div class="check-note">Close gates, secure fencing gaps from storm damage, prevent horses from wandering onto roads.</div>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggle(this,'p1')" data-phase="p1">
+        <div class="check-box"><svg viewBox="0 0 12 10" fill="none" stroke="#fff" stroke-width="2.5"><polyline points="1,5 4.5,8.5 11,1"/></svg></div>
+        <div class="check-content">
+          <div class="check-text">Begin photographing and videoing all damage <span class="check-tip">CRITICAL</span></div>
+          <div class="check-note">Start before any cleanup or debris removal. Shoot from multiple angles. Narrate video describing what you see. This documentation is your most important claim asset.</div>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggle(this,'p1')" data-phase="p1">
+        <div class="check-box"><svg viewBox="0 0 12 10" fill="none" stroke="#fff" stroke-width="2.5"><polyline points="1,5 4.5,8.5 11,1"/></svg></div>
+        <div class="check-content">
+          <div class="check-text">Do NOT remove or dispose of damaged property yet</div>
+          <div class="check-note">Your adjuster needs to inspect before cleanup. Exception: remove items only if they create an active safety hazard — and photograph first.</div>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggle(this,'p1')" data-phase="p1">
+        <div class="check-box"><svg viewBox="0 0 12 10" fill="none" stroke="#fff" stroke-width="2.5"><polyline points="1,5 4.5,8.5 11,1"/></svg></div>
+        <div class="check-content">
+          <div class="check-text">Make emergency temporary repairs only</div>
+          <div class="check-note">Tarp a damaged roof, board a broken window — prevent further damage. Keep all receipts. These costs are typically reimbursable.</div>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggle(this,'p1')" data-phase="p1">
+        <div class="check-box"><svg viewBox="0 0 12 10" fill="none" stroke="#fff" stroke-width="2.5"><polyline points="1,5 4.5,8.5 11,1"/></svg></div>
+        <div class="check-content">
+          <div class="check-text">Write down the date, time, and cause of loss immediately</div>
+          <div class="check-note">Memory fades fast under stress. Note exactly when the event occurred, what you observed, and weather conditions.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PHASE 2: FIRST 24 HOURS -->
+  <div class="phase">
+    <div class="phase-header phase-header-first24">
+      <div class="phase-icon">⏰</div>
+      <div>
+        <div class="phase-title phase-title-first24">Phase 2 — First 24 Hours</div>
+        <div class="phase-subtitle">Notify your insurer and begin documentation</div>
+      </div>
+      <div class="phase-count" id="count-p2">0/10</div>
+    </div>
+    <div class="check-list" id="phase-2">
+      <div class="check-item" onclick="toggle(this,'p2')" data-phase="p2">
+        <div class="check-box"><svg viewBox="0 0 12 10" fill="none" stroke="#fff" stroke-width="2.5"><polyline points="1,5 4.5,8.5 11,1"/></svg></div>
+        <div class="check-content">
+          <div class="check-text">Call your insurance agent or company claims line <span class="check-urgent">REQUIRED</span></div>
+          <div class="check-note">Most policies require prompt notification — delay can jeopardize coverage. Have your policy number ready. Report the claim even if you are unsure of the extent of damage.</div>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggle(this,'p2')" data-phase="p2">
+        <div class="check-box"><svg viewBox="0 0 12 10" fill="none" stroke="#fff" stroke-width="2.5"><polyline points="1,5 4.5,8.5 11,1"/></svg></div>
+        <div class="check-content">
+          <div class="check-text">Get your claim number and adjuster contact information</div>
+          <div class="check-note">Write these down and save them. All future communication should reference your claim number.</div>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggle(this,'p2')" data-phase="p2">
+        <div class="check-box"><svg viewBox="0 0 12 10" fill="none" stroke="#fff" stroke-width="2.5"><polyline points="1,5 4.5,8.5 11,1"/></svg></div>
+        <div class="check-content">
+          <div class="check-text">Continue photographing — shoot every damaged item individually</div>
+          <div class="check-note">Tack, equipment, feed, tools, fencing sections — photograph each item before moving it. Include serial number plates where visible.</div>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggle(this,'p2')" data-phase="p2">
+        <div class="check-box"><svg viewBox="0 0 12 10" fill="none" stroke="#fff" stroke-width="2.5"><polyline points="1,5 4.5,8.5 11,1"/></svg></div>
+        <div class="check-content">
+          <div class="check-text">Locate your insurance policy documents</div>
+          <div class="check-note">Find your declarations page, policy form, and any endorsements. Review your coverage limits, deductibles, and any relevant exclusions.</div>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggle(this,'p2')" data-phase="p2">
+        <div class="check-box"><svg viewBox="0 0 12 10" fill="none" stroke="#fff" stroke-width="2.5"><polyline points="1,5 4.5,8.5 11,1"/></svg></div>
+        <div class="check-content">
+          <div class="check-text">Begin written inventory of all damaged or destroyed property</div>
+          <div class="check-note">List every item: description, approximate age, estimated replacement cost. Include hay, feed, supplies, tools — not just major structures and equipment.</div>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggle(this,'p2')" data-phase="p2">
+        <div class="check-box"><svg viewBox="0 0 12 10" fill="none" stroke="#fff" stroke-width="2.5"><polyline points="1,5 4.5,8.5 11,1"/></svg></div>
+        <div class="check-content">
+          <div class="check-text">Save all receipts for emergency expenses</div>
+          <div class="check-note">Temporary boarding for horses, emergency fencing, tarps, temporary feed storage — all potentially reimbursable under your policy.</div>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggle(this,'p2')" data-phase="p2">
+        <div class="check-box"><svg viewBox="0 0 12 10" fill="none" stroke="#fff" stroke-width="2.5"><polyline points="1,5 4.5,8.5 11,1"/></svg></div>
+        <div class="check-content">
+          <div class="check-text">Notify local law enforcement if theft or vandalism is involved</div>
+          <div class="check-note">Get a police report number — your insurer will require it for theft claims. Do this even if recovery seems unlikely.</div>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggle(this,'p2')" data-phase="p2">
+        <div class="check-box"><svg viewBox="0 0 12 10" fill="none" stroke="#fff" stroke-width="2.5"><polyline points="1,5 4.5,8.5 11,1"/></svg></div>
+        <div class="check-content">
+          <div class="check-text">Contact your veterinarian if any horses were injured</div>
+          <div class="check-note">Get written documentation of injuries, treatment, and prognosis. Keep all vet bills — relevant if you have equine insurance in addition to farm coverage.</div>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggle(this,'p2')" data-phase="p2">
+        <div class="check-box"><svg viewBox="0 0 12 10" fill="none" stroke="#fff" stroke-width="2.5"><polyline points="1,5 4.5,8.5 11,1"/></svg></div>
+        <div class="check-content">
+          <div class="check-text">Arrange for livestock and horse welfare needs</div>
+          <div class="check-note">Temporary shelter, water, feed, farrier if needed. Document all extraordinary expenses related to animal care following the loss.</div>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggle(this,'p2')" data-phase="p2">
+        <div class="check-box"><svg viewBox="0 0 12 10" fill="none" stroke="#fff" stroke-width="2.5"><polyline points="1,5 4.5,8.5 11,1"/></svg></div>
+        <div class="check-content">
+          <div class="check-text">Upload all photos and video to cloud storage immediately</div>
+          <div class="check-note">Google Photos, iCloud, or Dropbox. Do not rely solely on your phone. If your phone is lost or damaged, your documentation is gone.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PHASE 3: FIRST WEEK -->
+  <div class="phase">
+    <div class="phase-header phase-header-week1">
+      <div class="phase-icon">📋</div>
+      <div>
+        <div class="phase-title phase-title-week1">Phase 3 — First Week</div>
+        <div class="phase-subtitle">Adjuster visit and damage assessment</div>
+      </div>
+      <div class="phase-count" id="count-p3">0/12</div>
+    </div>
+    <div class="check-list" id="phase-3">
+      <div class="check-item" onclick="toggle(this,'p3')" data-phase="p3">
+        <div class="check-box"><svg viewBox="0 0 12 10" fill="none" stroke="#fff" stroke-width="2.5"><polyline points="1,5 4.5,8.5 11,1"/></svg></div>
+        <div class="check-content">
+          <div class="check-text">Schedule adjuster inspection — be present for the visit</div>
+          <div class="check-note">Walk the adjuster through every area of damage. Point out everything — do not assume they will find it themselves.</div>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggle(this,'p3')" data-phase="p3">
+        <div class="check-box"><svg viewBox="0 0 12 10" fill="none" stroke="#fff" stroke-width="2.5"><polyline points="1,5 4.5,8.5 11,1"/></svg></div>
+        <div class="check-content">
+          <div class="check-text">Get independent contractor estimates for structural damage</div>
+          <div class="check-note">Obtain at least 2-3 estimates from local contractors before the adjuster's estimate is finalized. Having your own numbers is important if you dispute the adjuster's assessment.</div>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggle(this,'p3')" data-phase="p3">
+        <div class="check-box"><svg viewBox="0 0 12 10" fill="none" stroke="#fff" stroke-width="2.5"><polyline points="1,5 4.5,8.5 11,1"/></svg></div>
+        <div class="check-content">
+          <div class="check-text">Complete written property inventory with values</div>
+          <div class="check-note">For each item: description, brand/model, year purchased, purchase price, and estimated replacement cost. Research current replacement prices online.</div>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggle(this,'p3')" data-phase="p3">
+        <div class="check-box"><svg viewBox="0 0 12 10" fill="none" stroke="#fff" stroke-width="2.5"><polyline points="1,5 4.5,8.5 11,1"/></svg></div>
+        <div class="check-content">
+          <div class="check-text">Gather purchase receipts, invoices, and credit card records</div>
+          <div class="check-note">Any documentation of what you paid for damaged items supports your claim. Check email for online purchase receipts.</div>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggle(this,'p3')" data-phase="p3">
+        <div class="check-box"><svg viewBox="0 0 12 10" fill="none" stroke="#fff" stroke-width="2.5"><polyline points="1,5 4.5,8.5 11,1"/></svg></div>
+        <div class="check-content">
+          <div class="check-text">Document lost hay, feed, and supplies</div>
+          <div class="check-note">Count bales, estimate tons, document feed bags and supplement inventory. Get current price quotes from your local feed store.</div>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggle(this,'p3')" data-phase="p3">
+        <div class="check-box"><svg viewBox="0 0 12 10" fill="none" stroke="#fff" stroke-width="2.5"><polyline points="1,5 4.5,8.5 11,1"/></svg></div>
+        <div class="check-content">
+          <div class="check-text">Get fencing damage assessment with linear footage</div>
+          <div class="check-note">Walk or drive every fence line. Measure damaged sections in feet. Note fence type (board, pipe, wire, electric). Get replacement cost estimate from a local fencing contractor.</div>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggle(this,'p3')" data-phase="p3">
+        <div class="check-box"><svg viewBox="0 0 12 10" fill="none" stroke="#fff" stroke-width="2.5"><polyline points="1,5 4.5,8.5 11,1"/></svg></div>
+        <div class="check-content">
+          <div class="check-text">Request the adjuster's written damage estimate</div>
+          <div class="check-note">You are entitled to a copy. Review it carefully against your own documentation and contractor estimates before accepting.</div>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggle(this,'p3')" data-phase="p3">
+        <div class="check-box"><svg viewBox="0 0 12 10" fill="none" stroke="#fff" stroke-width="2.5"><polyline points="1,5 4.5,8.5 11,1"/></svg></div>
+        <div class="check-content">
+          <div class="check-text">Review adjuster estimate against your contractor quotes</div>
+          <div class="check-note">If the adjuster's estimate is significantly lower than contractor quotes, dispute it in writing with supporting documentation.</div>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggle(this,'p3')" data-phase="p3">
+        <div class="check-box"><svg viewBox="0 0 12 10" fill="none" stroke="#fff" stroke-width="2.5"><polyline points="1,5 4.5,8.5 11,1"/></svg></div>
+        <div class="check-content">
+          <div class="check-text">Consider hiring a public adjuster for large losses</div>
+          <div class="check-note">For claims over $50,000, a public adjuster who works for you (not the insurer) can often produce significantly higher settlements. They typically work on contingency — 10-15% of settlement.</div>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggle(this,'p3')" data-phase="p3">
+        <div class="check-box"><svg viewBox="0 0 12 10" fill="none" stroke="#fff" stroke-width="2.5"><polyline points="1,5 4.5,8.5 11,1"/></svg></div>
+        <div class="check-content">
+          <div class="check-text">Keep a running log of all claim-related communications</div>
+          <div class="check-note">Date, time, who you spoke with, what was discussed, what was promised. Follow up phone calls with email summaries to create a written record.</div>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggle(this,'p3')" data-phase="p3">
+        <div class="check-box"><svg viewBox="0 0 12 10" fill="none" stroke="#fff" stroke-width="2.5"><polyline points="1,5 4.5,8.5 11,1"/></svg></div>
+        <div class="check-content">
+          <div class="check-text">Track all additional living or operating expenses</div>
+          <div class="check-note">If your barn loss forces you to board horses elsewhere, rent equipment, or incur other extraordinary expenses, document everything — some policies cover these costs.</div>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggle(this,'p3')" data-phase="p3">
+        <div class="check-box"><svg viewBox="0 0 12 10" fill="none" stroke="#fff" stroke-width="2.5"><polyline points="1,5 4.5,8.5 11,1"/></svg></div>
+        <div class="check-content">
+          <div class="check-text">Contact your mortgage lender if structures are financed</div>
+          <div class="check-note">If your property or structures have a mortgage, your lender may be named on the insurance payment and must endorse the check. Notify them early.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PHASE 4: ONGOING -->
+  <div class="phase">
+    <div class="phase-header phase-header-ongoing">
+      <div class="phase-icon">🔄</div>
+      <div>
+        <div class="phase-title phase-title-ongoing">Phase 4 — Ongoing Through Settlement</div>
+        <div class="phase-subtitle">Settlement, rebuilding, and preventing future losses</div>
+      </div>
+      <div class="phase-count" id="count-p4">0/10</div>
+    </div>
+    <div class="check-list" id="phase-4">
+      <div class="check-item" onclick="toggle(this,'p4')" data-phase="p4">
+        <div class="check-box"><svg viewBox="0 0 12 10" fill="none" stroke="#fff" stroke-width="2.5"><polyline points="1,5 4.5,8.5 11,1"/></svg></div>
+        <div class="check-content">
+          <div class="check-text">Do not sign a final release until you are satisfied with the settlement</div>
+          <div class="check-note">A signed release is final. Once signed, you cannot reopen the claim for additional damages. Take the time you need to review the settlement offer thoroughly.</div>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggle(this,'p4')" data-phase="p4">
+        <div class="check-box"><svg viewBox="0 0 12 10" fill="none" stroke="#fff" stroke-width="2.5"><polyline points="1,5 4.5,8.5 11,1"/></svg></div>
+        <div class="check-content">
+          <div class="check-text">Request re-inspection if additional damage is discovered</div>
+          <div class="check-note">Storm damage sometimes reveals secondary damage during cleanup or repairs. Document it immediately and request a supplemental inspection.</div>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggle(this,'p4')" data-phase="p4">
+        <div class="check-box"><svg viewBox="0 0 12 10" fill="none" stroke="#fff" stroke-width="2.5"><polyline points="1,5 4.5,8.5 11,1"/></svg></div>
+        <div class="check-content">
+          <div class="check-text">File a complaint with your state insurance commissioner if claim is improperly denied</div>
+          <div class="check-note">Every state has an insurance commissioner who regulates claims handling. Filing a complaint is free and often produces results. Find your state commissioner at naic.org.</div>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggle(this,'p4')" data-phase="p4">
+        <div class="check-box"><svg viewBox="0 0 12 10" fill="none" stroke="#fff" stroke-width="2.5"><polyline points="1,5 4.5,8.5 11,1"/></svg></div>
+        <div class="check-content">
+          <div class="check-text">Consult an insurance attorney for disputed large claims</div>
+          <div class="check-note">Insurance attorneys who handle bad faith claims often work on contingency. For large disputed claims, a consultation is worth pursuing.</div>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggle(this,'p4')" data-phase="p4">
+        <div class="check-box"><svg viewBox="0 0 12 10" fill="none" stroke="#fff" stroke-width="2.5"><polyline points="1,5 4.5,8.5 11,1"/></svg></div>
+        <div class="check-content">
+          <div class="check-text">Keep all receipts from rebuilding and replacement purchases</div>
+          <div class="check-note">Under replacement cost policies, you may need to document actual replacement purchases to receive the full replacement cost (vs. ACV) portion of your settlement.</div>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggle(this,'p4')" data-phase="p4">
+        <div class="check-box"><svg viewBox="0 0 12 10" fill="none" stroke="#fff" stroke-width="2.5"><polyline points="1,5 4.5,8.5 11,1"/></svg></div>
+        <div class="check-content">
+          <div class="check-text">Photograph all completed repairs and replacements</div>
+          <div class="check-note">Document the rebuilt condition as thoroughly as you documented the damage. This becomes your baseline for future claims.</div>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggle(this,'p4')" data-phase="p4">
+        <div class="check-box"><svg viewBox="0 0 12 10" fill="none" stroke="#fff" stroke-width="2.5"><polyline points="1,5 4.5,8.5 11,1"/></svg></div>
+        <div class="check-content">
+          <div class="check-text">Update your policy limits after rebuilding</div>
+          <div class="check-note">New construction costs more than what you collected. Review and update coverage limits to reflect the current replacement value of rebuilt structures.</div>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggle(this,'p4')" data-phase="p4">
+        <div class="check-box"><svg viewBox="0 0 12 10" fill="none" stroke="#fff" stroke-width="2.5"><polyline points="1,5 4.5,8.5 11,1"/></svg></div>
+        <div class="check-content">
+          <div class="check-text">Create or update a property inventory for future claims</div>
+          <div class="check-note">Photograph every structure, piece of equipment, and significant item of farm personal property. Store documentation in cloud storage, not on your property.</div>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggle(this,'p4')" data-phase="p4">
+        <div class="check-box"><svg viewBox="0 0 12 10" fill="none" stroke="#fff" stroke-width="2.5"><polyline points="1,5 4.5,8.5 11,1"/></svg></div>
+        <div class="check-content">
+          <div class="check-text">Install risk mitigation improvements during rebuild</div>
+          <div class="check-note">Fire detection, metal roofing, improved drainage — rebuild with risk reduction in mind. Notify your insurer of improvements that may qualify for premium discounts.</div>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggle(this,'p4')" data-phase="p4">
+        <div class="check-box"><svg viewBox="0 0 12 10" fill="none" stroke="#fff" stroke-width="2.5"><polyline points="1,5 4.5,8.5 11,1"/></svg></div>
+        <div class="check-content">
+          <div class="check-text">Review your policy and consider switching carriers if claim handling was poor</div>
+          <div class="check-note">How a carrier handles claims is the ultimate test of an insurance policy. A difficult claims experience is a legitimate reason to shop for a new carrier at renewal.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NOTES SECTION -->
+  <div class="notes-section no-print">
+    <div class="notes-title">📝 Claim Notes (saved in your browser)</div>
+    <div class="notes-grid">
+      <div class="note-field">
+        <label>Insurance Company</label>
+        <input type="text" id="note-company" placeholder="e.g. Markel, Nationwide" oninput="saveNotes()">
+      </div>
+      <div class="note-field">
+        <label>Policy Number</label>
+        <input type="text" id="note-policy" placeholder="Your policy number" oninput="saveNotes()">
+      </div>
+      <div class="note-field">
+        <label>Claim Number</label>
+        <input type="text" id="note-claim" placeholder="Assigned at first call" oninput="saveNotes()">
+      </div>
+      <div class="note-field">
+        <label>Adjuster Name & Phone</label>
+        <input type="text" id="note-adjuster" placeholder="Name and direct number" oninput="saveNotes()">
+      </div>
+      <div class="note-field">
+        <label>Date of Loss</label>
+        <input type="text" id="note-date" placeholder="Date and time of loss" oninput="saveNotes()">
+      </div>
+      <div class="note-field">
+        <label>Cause of Loss</label>
+        <input type="text" id="note-cause" placeholder="Fire, storm, theft, etc." oninput="saveNotes()">
+      </div>
+      <div class="note-field" style="grid-column:1/-1;">
+        <label>Notes</label>
+        <textarea id="note-misc" placeholder="Adjuster visit dates, phone call summaries, action items..." oninput="saveNotes()"></textarea>
+      </div>
+    </div>
+  </div>
+
+  <div class="complete-banner" id="complete-banner">
+    <h3>✅ All Items Complete</h3>
+    <p>You have worked through the full claims checklist. Keep your documentation organized and follow up with your adjuster regularly until settlement is reached.</p>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <p><a href="/">HorsePropertyInsurance.com</a> &mdash; A <a href="https://www.bridleandbit.com">Bridle &amp; Bit Magazine</a> property &mdash; Educational purposes only. Not insurance advice.</p>
+  </div>
+</footer>
+
+<script>
+const TOTAL = 40;
+const phaseCounts = {p1:8, p2:10, p3:12, p4:10};
+const phaseChecked = {p1:0, p2:0, p3:0, p4:0};
+
+function toggle(el, phase) {
+  const wasDone = el.classList.contains('done');
+  el.classList.toggle('done');
+  phaseChecked[phase] += wasDone ? -1 : 1;
+  updateProgress();
+  saveState();
+}
+
+function updateProgress() {
+  const total = Object.values(phaseChecked).reduce((a,b)=>a+b,0);
+  const pct = Math.round(total/TOTAL*100);
+  document.getElementById('progress-fill').style.width = pct+'%';
+  document.getElementById('progress-label').textContent = total+' of '+TOTAL+' complete';
+  for(const phase in phaseCounts){
+    const el = document.getElementById('count-'+phase);
+    if(el) el.textContent = phaseChecked[phase]+'/'+phaseCounts[phase];
+  }
+  document.getElementById('complete-banner').classList.toggle('show', total===TOTAL);
+}
+
+function saveState() {
+  const items = [];
+  document.querySelectorAll('.check-item').forEach((el,i) => {
+    items.push(el.classList.contains('done'));
+  });
+  try { localStorage.setItem('hpi-checklist', JSON.stringify(items)); } catch(e){}
+}
+
+function loadState() {
+  try {
+    const saved = JSON.parse(localStorage.getItem('hpi-checklist'));
+    if (!saved) return;
+    const items = document.querySelectorAll('.check-item');
+    items.forEach((el, i) => {
+      if (saved[i]) {
+        el.classList.add('done');
+        const phase = el.dataset.phase;
+        if(phase) phaseChecked[phase]++;
+      }
+    });
+    updateProgress();
+  } catch(e){}
+}
+
+function saveNotes() {
+  const notes = {
+    company: document.getElementById('note-company').value,
+    policy: document.getElementById('note-policy').value,
+    claim: document.getElementById('note-claim').value,
+    adjuster: document.getElementById('note-adjuster').value,
+    date: document.getElementById('note-date').value,
+    cause: document.getElementById('note-cause').value,
+    misc: document.getElementById('note-misc').value
+  };
+  try { localStorage.setItem('hpi-notes', JSON.stringify(notes)); } catch(e){}
+}
+
+function loadNotes() {
+  try {
+    const notes = JSON.parse(localStorage.getItem('hpi-notes'));
+    if (!notes) return;
+    if(notes.company) document.getElementById('note-company').value = notes.company;
+    if(notes.policy) document.getElementById('note-policy').value = notes.policy;
+    if(notes.claim) document.getElementById('note-claim').value = notes.claim;
+    if(notes.adjuster) document.getElementById('note-adjuster').value = notes.adjuster;
+    if(notes.date) document.getElementById('note-date').value = notes.date;
+    if(notes.cause) document.getElementById('note-cause').value = notes.cause;
+    if(notes.misc) document.getElementById('note-misc').value = notes.misc;
+  } catch(e){}
+}
+
+function resetAll() {
+  if(!confirm('Reset all checkboxes? This cannot be undone.')) return;
+  document.querySelectorAll('.check-item').forEach(el => el.classList.remove('done'));
+  for(const phase in phaseChecked) phaseChecked[phase]=0;
+  updateProgress();
+  try { localStorage.removeItem('hpi-checklist'); } catch(e){}
+}
+
+loadState();
+loadNotes();
+</script>
+</body>
+</html>
