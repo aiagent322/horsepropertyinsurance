@@ -52,8 +52,6 @@ body {
 a { color:var(--secondary); text-decoration:none; transition:color var(--transition); }
 a:hover { color:var(--primary); text-decoration:underline; }
 img { max-width:100%; height:auto; display:block; }
-.ad-slot{text-align:center;margin:24px auto;}
-.ad-slot img,.ad-slot iframe,.ad-slot ins{margin:0 auto;display:block;}
 
 /* ── SKIP NAV ── */
 .skip-nav { position:absolute; left:-999px; top:auto; }
