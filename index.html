@@ -58,9 +58,14 @@ img{max-width:100%;height:auto;display:block;}
 
 /* HEADER */
 .site-header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.97);border-bottom:1px solid var(--border);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);}
-.header-top{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;}
+.header-top{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 16px;}
 .site-logo{font-size:1.25rem;font-weight:700;color:var(--primary);letter-spacing:-0.02em;}
 .site-logo span{color:var(--secondary);}
+.header-actions{display:flex;align-items:center;gap:14px;}
+.bb-logo{height:26px;width:auto;filter:brightness(0);}
+@media(max-width:479px){
+  .bb-logo-link{display:none;}
+}
 .nav-toggle{background:none;border:none;cursor:pointer;padding:6px;color:var(--primary);}
 .nav-toggle svg{width:22px;height:22px;}
 .main-nav{display:none;flex-direction:column;padding:0 16px 12px;gap:2px;}
@@ -70,6 +75,7 @@ img{max-width:100%;height:auto;display:block;}
 @media(min-width:768px){
   .header-top{padding:14px 24px;}
   .nav-toggle{display:none;}
+  .bb-logo{height:32px;}
   .main-nav{display:flex;flex-direction:row;padding:0 24px 10px;gap:0;}
   .main-nav a{padding:6px 14px;border-bottom:none;font-size:0.9rem;}
 }
@@ -152,9 +158,14 @@ footer{background:var(--primary);color:rgba(255,255,255,0.8);padding:40px 16px;m
 <header class="site-header">
   <div class="header-top">
     <a href="/" class="site-logo" style="text-decoration:none">HorseProperty<span>Insurance.com</span></a>
-    <button class="nav-toggle" onclick="this.setAttribute('aria-expanded',this.getAttribute('aria-expanded')==='true'?'false':'true');document.querySelector('.main-nav').classList.toggle('open')" aria-label="Toggle navigation" aria-expanded="false">
-      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-    </button>
+    <div class="header-actions">
+      <a href="https://www.bridleandbit.com" target="_blank" rel="noopener" class="bb-logo-link">
+        <img src="https://imagedelivery.net/9VlM7Y9GaQMXOu5Ypg50yA/bb-hp-0/public" alt="Bridle &amp; Bit Magazine" class="bb-logo" loading="lazy">
+      </a>
+      <button class="nav-toggle" onclick="this.setAttribute('aria-expanded',this.getAttribute('aria-expanded')==='true'?'false':'true');document.querySelector('.main-nav').classList.toggle('open')" aria-label="Toggle navigation" aria-expanded="false">
+        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
   </div>
   <nav class="main-nav">
     <a href="/coverage/">Coverage Types</a>
