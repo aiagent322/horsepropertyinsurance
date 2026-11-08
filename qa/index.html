@@ -108,6 +108,11 @@ footer a{color:#1d6fa5;}
   <div class="qa-q" onclick="this.closest('.qa-item').classList.toggle('open')">What is agritourism insurance and do I need it? <span class="qa-arrow">▼</span></div>
   <div class="qa-a">Agritourism insurance covers liability arising from public access to your farm or ranch for recreational, educational, or entertainment purposes — trail rides, horse camps, riding lessons, farm tours, and events. Standard farm liability may exclude or limit coverage for these activities. If you charge for any activities or allow non-family members onto your property for equestrian activities, agritourism or equine activity liability coverage is important.</div>
 </div>
+<!-- Revive Adserver Hosted edition Asynchronous JS Tag - Generated with Revive Adserver v6.0.6 -->
+<div class="ad-slot" style="text-align:center;max-width:100%;overflow:hidden;margin:24px auto;" id="qa-mid-ad">
+<ins data-revive-zoneid="31783" data-revive-id="727bec5e09208690b050ccfc6a45d384"></ins>
+<script async src="//servedby.revive-adserver.net/asyncjs.php"></script>
+</div>
 <div class="qa-item" data-cat="claims">
   <div class="qa-q" onclick="this.closest('.qa-item').classList.toggle('open')">How long does a farm insurance claim take to settle? <span class="qa-arrow">▼</span></div>
   <div class="qa-a">Simple claims — straightforward storm damage to a single structure with clear documentation — can settle in 2-4 weeks. Complex claims involving multiple structures, livestock losses, business interruption, or disputed valuations can take 3-6 months or longer. Total loss claims on large facilities can extend beyond a year when rebuilding cost disputes arise. Working with a public adjuster on large claims can help maximize and expedite settlement.</div>
@@ -153,6 +158,7 @@ footer a{color:#1d6fa5;}
 function filterQA(cat,btn){
   document.querySelectorAll('[onclick^="filterQA"]').forEach(b=>{b.style.background='#f4f6f8';b.style.color='#1f2933';});
   btn.style.background='#0b3c5d';btn.style.color='#fff';
+  document.getElementById('qa-mid-ad').style.display = (cat==='all') ? '' : 'none';
   document.querySelectorAll('.qa-item').forEach(i=>{
     i.style.display=(cat==='all'||i.dataset.cat===cat)?'':'none';
   });

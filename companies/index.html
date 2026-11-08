@@ -168,6 +168,11 @@ footer a{color:#1d6fa5;}
   <div style="margin-top:10px;"><span class="tag">Farm & Ranch</span><span class="tag">Farm Liability</span><span class="tag">Livestock</span></div>
   <p style="font-size:.83rem;color:#6b7280;margin-top:8px;margin-bottom:0;"><em>Member-owned mutual; strong community ties in agricultural markets.</em></p>
 </div>
+<!-- Revive Adserver Hosted edition Asynchronous JS Tag - Generated with Revive Adserver v6.0.6 -->
+<div class="ad-slot" style="text-align:center;max-width:100%;overflow:hidden;margin:24px auto;" id="co-mid-ad">
+<ins data-revive-zoneid="31780" data-revive-id="727bec5e09208690b050ccfc6a45d384"></ins>
+<script async src="//servedby.revive-adserver.net/asyncjs.php"></script>
+</div>
 <div class="company-card" data-cat="regional">
   <div class="company-name">Society Insurance</div>
   <div class="company-type">Regional Carrier</div>
@@ -278,6 +283,7 @@ footer a{color:#1d6fa5;}
 function filterCo(cat, btn) {
   document.querySelectorAll('.filter-btn').forEach(b => {b.classList.remove('active');});
   btn.classList.add('active');
+  document.getElementById('co-mid-ad').style.display = (cat === 'all') ? '' : 'none';
   document.querySelectorAll('.company-card').forEach(card => {
     card.style.display = (cat === 'all' || card.dataset.cat === cat) ? '' : 'none';
   });
